@@ -36,7 +36,6 @@
   --font-display: "Marcellus", "Times New Roman", serif;
   --font-text: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
-  --step-hero: clamp(2.75rem, 6.4vw, 6rem);
   --step-h2: clamp(2rem, 3.9vw, 3.5rem);
   --step-lead: clamp(1.125rem, 1.45vw, 1.375rem);
   --step-body: 1.0625rem;
@@ -319,6 +318,7 @@ ol {
 }
 
 .topbar .btn {
+  white-space: nowrap;
   min-height: 44px;
   padding: 10px 18px;
   font-size: var(--step-small);
@@ -378,12 +378,12 @@ ol {
 }
 
 .scene h1 {
-  font-size: var(--step-hero);
+  font-size: clamp(2.375rem, 4.3vw, 4.25rem);
   line-height: 1.08;
 }
 
 .scene h2 {
-  font-size: clamp(2.25rem, 4.4vw, 4rem);
+  font-size: clamp(2rem, 3.5vw, 3.25rem);
   line-height: 1.1;
 }
 
@@ -643,6 +643,36 @@ ol {
 .card--green .card__head,
 .card--green .card__head + p {
   color: var(--green);
+}
+
+.list-check {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.list-check li {
+  position: relative;
+  padding-left: 22px;
+  color: var(--ink);
+}
+
+.list-check li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.75em;
+  width: 10px;
+  height: 1px;
+  background: currentColor;
+}
+
+.card--green .list-check li::before {
+  background: var(--green);
+}
+
+.card--red .list-check li::before {
+  background: var(--red);
 }
 
 @media (max-width: 720px) {
