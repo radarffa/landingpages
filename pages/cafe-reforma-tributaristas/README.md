@@ -15,7 +15,7 @@ Edite o bloco `window.OFERTA` no `<head>` do `index.html`:
 
 - Os parâmetros do anúncio (`utm_*`, `fbclid`, `gclid`, `ttclid`, `src`, `sck`, `xcod`) são repassados para o link da Cakto.
 - O clique no botão de compra dispara `InitiateCheckout` (Meta Pixel) e `begin_checkout` (gtag/dataLayer), se os scripts estiverem instalados na página.
-- `og:image` está com caminho relativo: troque pela URL absoluta depois de publicar.
+- `og:image` (`img/og-cafe.jpg`) está com caminho relativo: troque pela URL absoluta depois de publicar.
 
 ## Abrir localmente
 
@@ -23,6 +23,7 @@ Abra `index.html` no navegador, ou rode `python3 -m http.server` nesta pasta e a
 
 ## Créditos
 
-- Fotos: acervo de Marcus França (Google Drive, pasta "Biblioteca Fotos" e fotos institucionais). Uso autorizado pelo cliente.
-- Fontes: Fraunces e Manrope, Google Fonts (SIL Open Font License).
-- Conteúdo: PDF "Cafe-Reforma-Tributaristas-Redesign-1", atualizado em 14/10/2026.
+- Identidade visual: segue o PDF da aula ("Redesign-1"): navy, marfim e dourado; Marcellus nos títulos e Inter no texto.
+- Imagens: extraídas do PDF da aula. Cenas de Marcus em casa e mesas de café: simulações por IA (como indicado no próprio PDF). Retrato institucional: foto original de Marcus França.
+- Fontes: Marcellus e Inter, Google Fonts (SIL Open Font License).
+- Conteúdo: PDF da aula, atualizado em 14/10/2026.

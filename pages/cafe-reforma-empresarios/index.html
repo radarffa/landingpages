@@ -6,25 +6,19 @@
     <title>Café com Reforma Tributária — aula gravada para empresários | Marcus França</title>
     <meta
       name="description"
-      content="Aula gravada de 1 hora com Marcus França sobre o que a Reforma Tributária muda no caixa, nos preços e na margem da sua empresa. PDF com resumo, atualizações por e-mail e garantia de 7 dias."
+      content="Uma conversa sobre o caixa, os preços e o futuro da sua empresa. Aula gravada de 1 hora com Marcus França, PDF com resumo, atualizações por e-mail e garantia de 7 dias."
     />
-    <meta name="theme-color" content="#15100c" />
+    <meta name="theme-color" content="#051828" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:title" content="Café com Reforma Tributária — para empresários" />
-    <meta
-      property="og:description"
-      content="Meu preço muda? O crédito compensa? Como eu preparo o caixa? Aula gravada de 1 hora com Marcus França."
-    />
-    <meta property="og:image" content="img/og-marcus.jpg" />
+    <meta property="og:description" content="Meu preço muda? O crédito compensa? Como eu preparo o caixa? Aula gravada de 1 hora com Marcus França." />
+    <meta property="og:image" content="img/og-cafe.jpg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..700,0..100&family=Manrope:wght@400;500;600;700;800&display=swap"
-    />
-    <link rel="preload" as="image" href="img/marcus-retrato-1200.webp" imagesrcset="img/marcus-retrato-640.webp 640w, img/marcus-retrato-1200.webp 1200w" imagesizes="(max-width: 900px) 100vw, 46vw" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Marcellus&display=swap" />
+    <link rel="preload" as="image" href="img/cena-coado-1672.webp" imagesrcset="img/cena-coado-900.webp 900w, img/cena-coado-1672.webp 1672w" imagesizes="100vw" />
     <link rel="stylesheet" href="styles.css" />
 
     <script>
@@ -42,34 +36,62 @@
     </script>
   </head>
   <body>
+    <!-- Ícones (traço fino, como no PDF) -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <symbol id="i-seta" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+      <symbol id="i-agenda" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="1.5" /><path d="M3.5 9.5h17M8 3v4M16 3v4M8 13h.01M12 13h.01M16 13h.01M8 16.5h.01M12 16.5h.01M16 16.5h.01" /></symbol>
+      <symbol id="i-calc" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="1.5" /><path d="M8 7h8M8.5 11h.01M12 11h.01M15.5 11h.01M8.5 14.5h.01M12 14.5h.01M15.5 14.5h.01M8.5 18h.01M12 18h.01M15.5 18h.01" /></symbol>
+      <symbol id="i-recibo" viewBox="0 0 24 24"><path d="M6 3h12v18l-2-1.5L14 21l-2-1.5L10 21l-2-1.5L6 21z" /><path d="M9 8h6M9 11.5h6M9 15h4" /></symbol>
+      <symbol id="i-ok" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M8.5 12.2l2.4 2.4 4.6-4.8" /></symbol>
+      <symbol id="i-alerta" viewBox="0 0 24 24"><path d="M12 4l9 16H3z" /><path d="M12 10v4.5M12 17.2h.01" /></symbol>
+      <symbol id="i-lei" viewBox="0 0 24 24"><path d="M3 9.5L12 4l9 5.5M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3.5 20.5h17" /></symbol>
+      <symbol id="i-engrenagem" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" /><path d="M12 2.8v2.4M12 18.8v2.4M21.2 12h-2.4M5.2 12H2.8M18.5 5.5l-1.7 1.7M7.2 16.8l-1.7 1.7M18.5 18.5l-1.7-1.7M7.2 7.2L5.5 5.5" /><circle cx="12" cy="12" r="6.2" /></symbol>
+      <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7z" /><path d="M14 3v5h5M10 13h6M10 17h6" /></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M10 8.5v7l6-3.5z" /></symbol>
+      <symbol id="i-email" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1.5" /><path d="M3.5 6.5l8.5 6.5 8.5-6.5" /></symbol>
+      <symbol id="i-escudo" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6z" /><path d="M8.7 12l2.3 2.3 4.3-4.6" /></symbol>
+      <symbol id="i-cadeado" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="1.5" /><path d="M8 11V8a4 4 0 0 1 8 0v3" /></symbol>
+      <symbol id="i-mais" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></symbol>
+      <symbol id="i-pergunta" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M9.6 9.3a2.5 2.5 0 1 1 3.3 2.4c-.6.2-.9.7-.9 1.3v.8M12 16.8h.01" /></symbol>
+    </svg>
+
     <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
     <header class="topbar">
       <div class="wrap topbar__inner">
-        <a class="wordmark" href="#topo">Café com Reforma</a>
+        <a class="topbar__label" href="#topo">Marcus França</a>
         <nav aria-label="Seções">
-          <a href="#aula">A aula</a>
-          <a href="#conta-no-guardanapo">A conta</a>
-          <a href="#marcus">Marcus França</a>
-          <a href="#perguntas">Dúvidas</a>
+          <a href="#assuntos">A aula</a>
+          <a href="#guardanapo">A conta</a>
+          <a href="#marcus">Quem conduz</a>
+          <a href="#duvidas">Dúvidas</a>
           <a class="btn" href="#oferta">Comprar a aula</a>
         </nav>
       </div>
     </header>
 
     <main id="conteudo">
-      <!-- ============ HERO ============ -->
-      <section class="hero" id="topo" aria-labelledby="titulo">
-        <div class="hero__text">
-          <h1 class="hero__title" id="titulo">Café com Reforma Tributária</h1>
-          <p class="hero__lead">
-            Uma aula gravada de 1 hora com Marcus França sobre o que a reforma muda no caixa, nos
-            preços e na margem da sua empresa, de 2026 a 2033.
-          </p>
+      <!-- ============ CAPA (slide 1) ============ -->
+      <section class="scene hero" id="topo" aria-labelledby="titulo">
+        <figure class="scene__media">
+          <img
+            src="img/cena-coado-1672.webp"
+            srcset="img/cena-coado-900.webp 900w, img/cena-coado-1672.webp 1672w"
+            sizes="100vw"
+            width="1672"
+            height="941"
+            alt="Marcus França passando café coado na cozinha"
+            fetchpriority="high"
+          />
+        </figure>
+        <div class="scene__text">
+          <h1 id="titulo">Café com Reforma Tributária</h1>
+          <hr class="gold-rule" />
+          <p class="scene__lead">Uma conversa sobre o caixa, os preços e o futuro da sua empresa</p>
           <div class="hero__offer">
-            <a class="btn btn--big" href="#oferta" data-checkout="hero">
+            <a class="btn" href="#oferta" data-checkout="capa">
               Quero assistir à aula
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+              <svg class="ico" aria-hidden="true"><use href="#i-seta" /></svg>
             </a>
             <div class="price">
               <span class="price__value num" data-preco>R$ 147</span>
@@ -77,495 +99,512 @@
             </div>
           </div>
           <ul class="hero__facts">
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M10 8.5v7l6-3.5-6-3.5z" fill="currentColor" stroke="none" /></svg>
-              Aula gravada de 1 hora
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 3h7l5 5v13H7z" /><path d="M14 3v5h5M10 13h6M10 17h6" /></svg>
-              PDF com o resumo
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" /><path d="M3 6l9 7 9-7" /></svg>
-              Atualizações por e-mail
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6z" /><path d="M8.5 12l2.5 2.5 4.5-5" /></svg>
-              Garantia de 7 dias
-            </li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-play" /></svg>Aula gravada de 1 hora</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-doc" /></svg>PDF com o resumo</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-email" /></svg>Atualizações por e-mail</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-escudo" /></svg>Garantia de 7 dias</li>
           </ul>
         </div>
-        <figure class="hero__media">
-          <img
-            src="img/marcus-retrato-1200.webp"
-            srcset="img/marcus-retrato-640.webp 640w, img/marcus-retrato-1200.webp 1200w"
-            sizes="(max-width: 900px) 100vw, 46vw"
-            width="1200"
-            height="1208"
-            alt="Marcus França, de terno escuro, sentado numa poltrona de couro com as mãos entrelaçadas"
-            fetchpriority="high"
-          />
-          <figcaption>Marcus França, advogado tributarista</figcaption>
-        </figure>
       </section>
 
-      <!-- ============ PERGUNTAS ============ -->
-      <section class="section" aria-labelledby="t-perguntas">
-        <div class="wrap questions">
-          <figure class="questions__media reveal">
-            <img
-              class="parallax"
-              src="img/marcus-mesa-1200.webp"
-              srcset="img/marcus-mesa-640.webp 640w, img/marcus-mesa-1200.webp 1200w"
-              sizes="(max-width: 900px) 100vw, 40vw"
-              width="1200"
-              height="1344"
-              alt="Marcus França de costas, trabalhando em dois monitores na mesa do escritório"
-              loading="lazy"
-            />
-          </figure>
-          <div class="questions__body">
-            <h2 class="reveal" id="t-perguntas">Três perguntas já chegaram à mesa</h2>
-            <ul class="qlist">
-              <li class="reveal" style="--i: 1">Meu preço muda?</li>
-              <li class="reveal" style="--i: 2">O crédito compensa?</li>
-              <li class="reveal" style="--i: 3">Como eu preparo o caixa?</li>
-            </ul>
-            <p class="reveal" style="--i: 4">
-              A aula responde às três com a lei em mãos (EC 132/2023, LC 214/2025 e LC 227/2026) e com
-              contas que você consegue refazer com os números da sua empresa.
-            </p>
-          </div>
+      <!-- ============ PUXE UMA CADEIRA (slide 2) ============ -->
+      <section class="scene" aria-labelledby="t-cadeira">
+        <figure class="scene__media">
+          <img
+            src="img/cena-conversa-1672.webp"
+            srcset="img/cena-conversa-900.webp 900w, img/cena-conversa-1672.webp 1672w"
+            sizes="100vw"
+            width="1672"
+            height="940"
+            alt="Marcus França à mesa, com xícaras de café, explicando um ponto"
+            loading="lazy"
+          />
+        </figure>
+        <div class="scene__text">
+          <p class="scene__label reveal">Puxe uma cadeira</p>
+          <h2 class="reveal" id="t-cadeira">Vamos colocar a sua empresa nessa conversa?</h2>
+          <ul class="questions-list reveal" style="--i: 1">
+            <li>Meu preço muda?</li>
+            <li>O crédito compensa?</li>
+            <li>Como eu preparo o caixa?</li>
+          </ul>
+          <p class="reveal" style="--i: 2">
+            A aula responde às três com a lei em mãos e com contas que você consegue refazer com os números da sua empresa.
+          </p>
         </div>
       </section>
 
-      <!-- ============ CONTEÚDO DA AULA ============ -->
-      <section class="section" id="aula" aria-labelledby="t-aula">
+      <!-- ============ QUATRO ASSUNTOS (slide 4) ============ -->
+      <section class="section navy" id="assuntos" aria-labelledby="t-assuntos">
         <div class="wrap">
-          <div class="section__head">
-            <h2 class="reveal" id="t-aula">O que está no cardápio</h2>
-            <p class="reveal" style="--i: 1">Quatro assuntos, na ordem em que a decisão acontece dentro da empresa.</p>
-          </div>
-          <ol class="menu" aria-label="Assuntos da aula">
+          <div class="slide-top"><span>Marcus França</span><span>01</span></div>
+          <h2 class="slide-title reveal" id="t-assuntos">O café de hoje tem quatro assuntos</h2>
+          <ol class="agenda slide-body">
             <li class="reveal">
+              <span class="agenda__n">01</span>
               <h3>O que muda</h3>
-              <ul>
-                <li>IBS no lugar de ICMS e ISS; CBS no lugar de PIS e Cofins.</li>
-                <li>IPI reduzido a zero em 2027, com as exceções da Zona Franca de Manaus.</li>
-                <li>Imposto Seletivo: que tipo de produto entra na lista.</li>
-                <li>Lucro Presumido e altas rendas: o que mudou com a LC 224/2025 e a Lei 15.270/2025.</li>
-              </ul>
-            </li>
-            <li class="reveal" style="--i: 1">
-              <h3>Onde pesa</h3>
-              <ul>
-                <li>Débito e crédito: por que o preço da nota é só o começo da conta.</li>
-                <li>Split payment: quem recebe cada parte do pagamento e o efeito no capital de giro.</li>
-                <li>Benefícios de ICMS que precisam entrar no plano da transição.</li>
-                <li>Contratos sem cláusula para mudança tributária.</li>
-              </ul>
+              <div class="agenda__desc">
+                <p>Base legal, novos tributos e transição.</p>
+                <ul>
+                  <li>IBS no lugar de ICMS e ISS; CBS no lugar de PIS e Cofins.</li>
+                  <li>IPI reduzido a zero em 2027, com exceções ligadas à Zona Franca de Manaus.</li>
+                  <li>Imposto Seletivo e, antes do consumo, o que muda na renda (LC 224/2025 e Lei 15.270/2025).</li>
+                </ul>
+              </div>
             </li>
             <li class="reveal">
-              <h3>Como decidir</h3>
-              <ul>
-                <li>A conta do guardanapo: receita, imposto por fora e preço total.</li>
-                <li>Preço e margem em quatro setores: serviços, mão de obra, indústria e agroindústria.</li>
-                <li>Simples Nacional: recolher IBS/CBS no Simples ou no regime regular.</li>
-              </ul>
+              <span class="agenda__n">02</span>
+              <h3>Onde pesa</h3>
+              <div class="agenda__desc">
+                <p>Crédito, capital de giro e contratos.</p>
+                <ul>
+                  <li>Débito e crédito na compra e na venda.</li>
+                  <li>Split payment: quem recebe cada parte do pagamento.</li>
+                  <li>Benefícios de ICMS que precisam entrar no plano.</li>
+                </ul>
+              </div>
             </li>
-            <li class="reveal" style="--i: 1">
+            <li class="reveal">
+              <span class="agenda__n">03</span>
+              <h3>Como decidir</h3>
+              <div class="agenda__desc">
+                <p>Preço e margem nos exemplos.</p>
+                <ul>
+                  <li>A conta do guardanapo: receita, imposto por fora e preço total.</li>
+                  <li>Quatro setores: contabilidade, mão de obra, indústria e agroindústria.</li>
+                  <li>Simples Nacional: IBS/CBS no Simples ou no regime regular.</li>
+                </ul>
+              </div>
+            </li>
+            <li class="reveal">
+              <span class="agenda__n">04</span>
               <h3>O próximo passo</h3>
-              <ul>
-                <li>Cadastro, classificação fiscal e ERP prontos para 2026 e 2027.</li>
-                <li>Apuração assistida: documento, recebimento e pagamento precisam fechar.</li>
-                <li>Prioridades, responsáveis e o que acompanhar até 2033.</li>
-              </ul>
+              <div class="agenda__desc">
+                <p>Preparação da empresa e atuação consultiva.</p>
+                <ul>
+                  <li>Cadastro, classificação fiscal e ERP prontos para 2026 e 2027.</li>
+                  <li>Apuração assistida: documento, recebimento e pagamento precisam fechar.</li>
+                </ul>
+              </div>
             </li>
           </ol>
         </div>
       </section>
 
-      <!-- ============ CONTA NO GUARDANAPO ============ -->
-      <section class="napkin" id="conta-no-guardanapo" aria-labelledby="t-conta">
+      <!-- ============ TRANSIÇÃO (slide 7) ============ -->
+      <section class="section ivory" aria-labelledby="t-transicao">
         <div class="wrap">
-          <div class="section__head">
-            <h2 class="reveal" id="t-conta">Faça a conta no guardanapo</h2>
-            <p class="reveal" style="--i: 1">
-              A mesma conta que abre a parte de preços da aula: o valor sem IBS/CBS, mais o imposto por
-              fora, dá o preço que o seu cliente paga.
-            </p>
-          </div>
+          <div class="slide-top"><span>Marcus França</span><span>02</span></div>
+          <h2 class="slide-title reveal" id="t-transicao">A transição não acontece de uma vez</h2>
+          <ol class="rows slide-body" aria-label="Calendário da transição">
+            <li class="row reveal"><span class="row__label"><svg class="ico" aria-hidden="true"><use href="#i-agenda" /></svg>2026</span><span class="row__desc">Testes de IBS/CBS e adaptação operacional.</span></li>
+            <li class="row reveal" style="--i: 1"><span class="row__label"><svg class="ico" aria-hidden="true"><use href="#i-agenda" /></svg>2027–2028</span><span class="row__desc">CBS, fim de PIS/Cofins e início do Imposto Seletivo.</span></li>
+            <li class="row reveal" style="--i: 2"><span class="row__label"><svg class="ico" aria-hidden="true"><use href="#i-agenda" /></svg>2029–2032</span><span class="row__desc">IBS cresce. ICMS e ISS diminuem.</span></li>
+            <li class="row reveal" style="--i: 3"><span class="row__label"><svg class="ico" aria-hidden="true"><use href="#i-agenda" /></svg>2033</span><span class="row__desc">Modelo pleno de IBS e fim de ICMS/ISS.</span></li>
+          </ol>
+          <p class="slide-note">EC 132/2023 · LC 214/2025</p>
+        </div>
+      </section>
 
-          <div class="napkin__grid">
-            <form class="napkin__form reveal" id="conta" novalidate>
+      <!-- ============ 2026 (slide 8) ============ -->
+      <section class="section navy" aria-labelledby="t-2026">
+        <div class="wrap">
+          <div class="slide-top"><span>Marcus França</span><span>03</span></div>
+          <h2 class="slide-title reveal" id="t-2026">2026: teste também exige preparo</h2>
+          <div class="cards slide-body">
+            <div class="card reveal">
+              <p class="card__head"><svg class="ico" aria-hidden="true"><use href="#i-agenda" /></svg>Na emissão</p>
+              <p>CBS de teste: 0,9%. IBS de teste: 0,1%.</p>
+              <p>Calendário e exigências variam por documento e regime.</p>
+            </div>
+            <div class="card reveal" style="--i: 1">
+              <p class="card__head"><svg class="ico" aria-hidden="true"><use href="#i-engrenagem" /></svg>Na rotina</p>
+              <p>Cadastro, classificação fiscal e ERP precisam funcionar juntos.</p>
+              <p>A dispensa de recolhimento depende das condições e obrigações aplicáveis.</p>
+            </div>
+          </div>
+          <p class="slide-note">O primeiro trabalho é operacional. A empresa precisa saber emitir e conferir.</p>
+        </div>
+      </section>
+
+      <!-- ============ O CRÉDITO MUDA O CUSTO (slide 14) ============ -->
+      <section class="scene" aria-labelledby="t-credito">
+        <figure class="scene__media">
+          <img
+            src="img/cena-coado-2-1672.webp"
+            srcset="img/cena-coado-2-900.webp 900w, img/cena-coado-2-1672.webp 1672w"
+            sizes="100vw"
+            width="1672"
+            height="941"
+            alt="Marcus França coando café em uma jarra de vidro"
+            loading="lazy"
+          />
+        </figure>
+        <div class="scene__text">
+          <p class="scene__label reveal">O que entra na sua operação</p>
+          <h2 class="reveal" id="t-credito">O crédito muda o custo da sua compra</h2>
+          <hr class="gold-rule reveal" />
+          <p class="scene__lead reveal" style="--i: 1">O preço da nota é só o começo da conta.</p>
+        </div>
+      </section>
+
+      <!-- ============ DÉBITO E CRÉDITO (slide 15) ============ -->
+      <section class="section ivory" aria-labelledby="t-debito">
+        <div class="wrap">
+          <div class="slide-top"><span>Marcus França</span><span>04</span></div>
+          <h2 class="slide-title reveal" id="t-debito">Vamos separar débito de crédito</h2>
+          <div class="cards slide-body">
+            <div class="card card--red reveal">
+              <p class="card__head"><svg class="ico" aria-hidden="true"><use href="#i-alerta" /></svg>Na venda</p>
+              <p>A operação pode gerar débito de IBS/CBS.</p>
+              <p>O enquadramento define o tratamento do fornecimento.</p>
+            </div>
+            <div class="card card--green reveal" style="--i: 1">
+              <p class="card__head"><svg class="ico" aria-hidden="true"><use href="#i-ok" /></svg>Na compra</p>
+              <p>A aquisição pode gerar crédito, conforme os requisitos legais.</p>
+              <p>Documento correto e condições de apropriação precisam caminhar juntos.</p>
+            </div>
+          </div>
+          <p class="slide-note">Crédito elegível e prazo de aproveitamento influenciam o resultado.</p>
+        </div>
+      </section>
+
+      <!-- ============ GUARDANAPO (slides 21 e 27) ============ -->
+      <section class="section ivory" id="guardanapo" aria-labelledby="t-guardanapo" style="padding-top: 0">
+        <div class="wrap">
+          <div class="slide-top"><span>Marcus França</span><span>05</span></div>
+          <h2 class="slide-title reveal" id="t-guardanapo">Uma conta que cabe no guardanapo</h2>
+          <p class="slide-sub reveal" style="--i: 1">Digite um valor e escolha o tratamento. É a mesma conta que abre a parte de preços da aula.</p>
+
+          <div class="napkin slide-body">
+            <form id="conta" novalidate>
               <div class="field">
-                <label for="valor">Valor da venda, sem IBS/CBS</label>
+                <label for="valor">Receita sem IBS/CBS</label>
                 <div class="money">
                   <span aria-hidden="true">R$</span>
                   <input id="valor" name="valor" type="text" inputmode="decimal" autocomplete="off" value="1.000,00" aria-describedby="valor-dica" />
                 </div>
-                <span class="field__hint" id="valor-dica">Digite qualquer valor, por exemplo 2.500 ou 18.000,00.</span>
+                <span class="field__hint" id="valor-dica">Por exemplo 2.500 ou 18.000,00.</span>
               </div>
-
               <fieldset class="field">
                 <legend>Tratamento da operação</legend>
                 <div class="choices">
                   <div class="choice">
                     <input type="radio" name="tratamento" id="t-padrao" value="0.275" checked />
-                    <label for="t-padrao"><span>Alíquota padrão</span><span>27,5%</span></label>
+                    <label for="t-padrao"><svg class="ico" aria-hidden="true"><use href="#i-calc" /></svg><span>Padrão</span><span>27,5%</span></label>
                   </div>
                   <div class="choice">
                     <input type="radio" name="tratamento" id="t-30" value="0.1925" />
-                    <label for="t-30"><span>Redução de 30%</span><span>19,25%</span></label>
+                    <label for="t-30"><svg class="ico" aria-hidden="true"><use href="#i-ok" /></svg><span>Redução de 30%</span><span>19,25%</span></label>
                   </div>
                   <div class="choice">
                     <input type="radio" name="tratamento" id="t-60" value="0.11" />
-                    <label for="t-60"><span>Redução de 60%</span><span>11%</span></label>
+                    <label for="t-60"><svg class="ico" aria-hidden="true"><use href="#i-ok" /></svg><span>Redução de 60%</span><span>11%</span></label>
                   </div>
                 </div>
               </fieldset>
             </form>
 
-            <div class="napkin__result reveal" style="--i: 1" aria-live="polite">
-              <dl class="bill">
-                <dt>Receita sem IBS/CBS</dt>
-                <dd id="r-base">R$ 1.000,00</dd>
-                <dt>+ IBS/CBS por fora (<span id="r-aliquota">27,5%</span>)</dt>
-                <dd id="r-imposto">R$ 275,00</dd>
-                <dt class="bill__total-label">= Preço total ao cliente</dt>
-                <dd class="bill__total" id="r-total">R$ 1.275,00</dd>
-              </dl>
+            <div aria-live="polite">
+              <div class="sum">
+                <p class="sum__line"><span>Receita sem IBS/CBS</span><span id="r-base">R$ 1.000,00</span></p>
+                <p class="sum__line"><span>+ imposto por fora (<span id="r-aliquota">27,5%</span>)</span><span id="r-imposto">R$ 275,00</span></p>
+                <div class="sum__rule" aria-hidden="true"></div>
+                <p class="sum__line sum__total"><span>= preço total ao cliente</span><span id="r-total">R$ 1.275,00</span></p>
+              </div>
 
               <div class="split">
-                <h3>Com split payment, o dinheiro chega separado</h3>
-                <div class="split__bar" aria-hidden="true">
-                  <div class="split__part split__part--net" id="barra-liquido">78%</div>
-                  <div class="split__part split__part--tax" id="barra-tributo">22%</div>
-                </div>
-                <div class="split__legend">
-                  <p>Vai para a sua empresa<strong id="r-fornecedor">R$ 1.000,00</strong></p>
-                  <p>Segregado para o fisco<strong id="r-tributo">R$ 275,00</strong></p>
-                </div>
+                <p class="split__intro">Com split payment, na liquidação o pagamento chega separado:</p>
+                <dl class="split__cols">
+                  <div><dt>O cliente paga</dt><dd id="r-cliente">R$ 1.275,00</dd></div>
+                  <div><dt>O fornecedor recebe</dt><dd id="r-fornecedor">R$ 1.000,00</dd></div>
+                  <div><dt>Tributos no exemplo</dt><dd id="r-tributo">R$ 275,00</dd></div>
+                </dl>
               </div>
             </div>
           </div>
 
-          <p class="napkin__note" style="margin-top: 24px">
-            Hipótese didática: alíquota padrão de 27,5%, sem créditos de etapas anteriores. Não é a
-            alíquota definitiva nem uma análise da sua operação. A retenção efetiva no split payment pode variar.
+          <p class="slide-note">
+            Hipótese didática: alíquota padrão de 27,5%, sem créditos ou recolhimentos anteriores. Não é uma alíquota definitiva.
+            A retenção efetiva pode variar. A margem também depende dos custos e dos créditos que a operação pode aproveitar.
           </p>
-
-          <div class="napkin__cta">
-            <p>Na aula, a conta continua: entram o crédito, os custos e a margem.</p>
-            <a class="btn" href="#oferta" data-checkout="guardanapo">
-              Quero a conta completa
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
-            </a>
-          </div>
         </div>
       </section>
 
-      <!-- ============ CASOS ============ -->
-      <section class="section" aria-labelledby="t-casos">
+      <!-- ============ A CONTA NA MESA (slide 26) ============ -->
+      <section class="scene" aria-labelledby="t-conta-mesa">
+        <figure class="scene__media">
+          <img
+            src="img/cena-graos-1672.webp"
+            srcset="img/cena-graos-900.webp 900w, img/cena-graos-1672.webp 1672w"
+            sizes="100vw"
+            width="1672"
+            height="941"
+            alt="Marcus França servindo grãos de café de um pote de vidro"
+            loading="lazy"
+          />
+        </figure>
+        <div class="scene__text">
+          <p class="scene__label reveal">A conta na mesa</p>
+          <h2 class="reveal" id="t-conta-mesa">Vamos fazer a conta antes de mudar o preço</h2>
+          <hr class="gold-rule reveal" />
+          <p class="scene__lead reveal" style="--i: 1">Preço total, imposto e margem são partes diferentes da conversa.</p>
+        </div>
+      </section>
+
+      <!-- ============ CASOS (slides 29 a 32) ============ -->
+      <section class="section ivory" aria-labelledby="t-casos">
         <div class="wrap">
-          <div class="section__head">
-            <h2 class="reveal" id="t-casos">Nem todo preço sobe</h2>
-            <p class="reveal" style="--i: 1">
-              Quatro exemplos da aula. A meta é manter o mesmo resultado depois dos tributos, com custos
-              constantes, no modelo pleno de 2033.
-            </p>
-          </div>
-          <div class="cases">
-            <div class="cases__table-wrap reveal">
-              <table class="cases__table">
-                <caption>Preço para preservar o resultado, por setor (valores do exemplo)</caption>
-                <thead>
-                  <tr>
-                    <th scope="col">Setor</th>
-                    <th scope="col">Preço hoje</th>
-                    <th scope="col">Tributo líquido hoje</th>
-                    <th scope="col">Tributo líquido em 2033</th>
-                    <th scope="col">Preço novo</th>
-                    <th scope="col">Variação</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">Contabilidade<small>redução de 30%</small></th>
-                    <td data-label="Preço hoje">R$ 10.000,00</td>
-                    <td data-label="Tributo líquido hoje">R$ 865,00</td>
-                    <td data-label="Tributo líquido em 2033">R$ 1.386,43</td>
-                    <td data-label="Preço novo">R$ 10.521,43</td>
-                    <td data-label="Variação" class="delta delta--up">+5,2%</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Locação de mão de obra<small>alíquota padrão</small></th>
-                    <td data-label="Preço hoje">R$ 10.000,00</td>
-                    <td data-label="Tributo líquido hoje">R$ 1.333,00</td>
-                    <td data-label="Tributo líquido em 2033">R$ 2.160,30</td>
-                    <td data-label="Preço novo">R$ 10.827,30</td>
-                    <td data-label="Variação" class="delta delta--up">+8,3%</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Indústria<small>com créditos informados</small></th>
-                    <td data-label="Preço hoje">R$ 10.500,00</td>
-                    <td data-label="Tributo líquido hoje">R$ 1.355,00</td>
-                    <td data-label="Tributo líquido em 2033">R$ 1.132,78</td>
-                    <td data-label="Preço novo">R$ 10.277,78</td>
-                    <td data-label="Variação" class="delta delta--down">−2,1%</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Agroindústria de alimentos<small>redução de 60%</small></th>
-                    <td data-label="Preço hoje">R$ 10.000,00</td>
-                    <td data-label="Tributo líquido hoje">R$ 1.217,00</td>
-                    <td data-label="Tributo líquido em 2033">R$ 338,98</td>
-                    <td data-label="Preço novo">R$ 9.121,98</td>
-                    <td data-label="Variação" class="delta delta--down">−8,8%</td>
-                  </tr>
-                </tbody>
-              </table>
+          <div class="slide-top"><span>Marcus França</span><span>06</span></div>
+          <h2 class="slide-title reveal" id="t-casos">O imposto muda. O resultado precisa de um plano.</h2>
+          <p class="slide-sub reveal" style="--i: 1">Quatro exemplos da aula, no modelo pleno de 2033, mantendo o valor após tributos com custos constantes.</p>
+
+          <div class="slide-body">
+            <div class="tabs" role="tablist" aria-label="Setores" hidden>
+              <button class="tab" type="button" role="tab" id="aba-contabilidade" aria-controls="caso-contabilidade">Contabilidade</button>
+              <button class="tab" type="button" role="tab" id="aba-mao-de-obra" aria-controls="caso-mao-de-obra">Locação de mão de obra</button>
+              <button class="tab" type="button" role="tab" id="aba-industria" aria-controls="caso-industria">Indústria</button>
+              <button class="tab" type="button" role="tab" id="aba-agro" aria-controls="caso-agro">Agroindústria de alimentos</button>
             </div>
-            <div class="cases__aside reveal" style="--i: 1">
-              <p class="big">No exemplo da agroindústria, o preço cai 8,8% e o resultado continua o mesmo.</p>
-              <p class="small">
-                Exemplos didáticos com alíquota hipotética de 27,5% e créditos futuros hipotéticos. Não são
-                previsão setorial. Na aula, cada número é explicado passo a passo.
-              </p>
-            </div>
+
+            <article class="case" id="caso-contabilidade" aria-labelledby="aba-contabilidade">
+              <h3>Serviços de contabilidade</h3>
+              <div class="case__big">
+                <div><p><svg class="ico" aria-hidden="true"><use href="#i-calc" /></svg>Cenário atual</p><strong>R$ 10.000,00</strong></div>
+                <div><p><svg class="ico" aria-hidden="true"><use href="#i-calc" /></svg>Preço para preservar o resultado</p><strong>R$ 10.521,43</strong></div>
+              </div>
+              <div class="case__head" aria-hidden="true"><span></span><span>Hoje</span><span>Em 2033</span></div>
+              <p class="case__row case__row--red"><span><svg class="ico" aria-hidden="true"><use href="#i-recibo" /></svg>Tributo líquido</span><span>R$ 865,00</span><span>R$ 1.386,43</span></p>
+              <p class="case__row case__row--ok"><span><svg class="ico" aria-hidden="true"><use href="#i-ok" /></svg>Valor após tributos</span><span>R$ 9.135,00</span><span>R$ 9.135,00</span></p>
+              <p class="case__ok-note">Resultado preservado no exemplo, com custos constantes.</p>
+              <p class="case__note">Redução de 30%, quando aplicável. Crédito futuro hipotético: R$ 312,00.</p>
+            </article>
+
+            <article class="case" id="caso-mao-de-obra" aria-labelledby="aba-mao-de-obra">
+              <h3>Locação de mão de obra</h3>
+              <div class="case__big">
+                <div><p><svg class="ico" aria-hidden="true"><use href="#i-calc" /></svg>Cenário atual</p><strong>R$ 10.000,00</strong></div>
+                <div><p><svg class="ico" aria-hidden="true"><use href="#i-calc" /></svg>Preço para preservar o resultado</p><strong>R$ 10.827,30</strong></div>
+              </div>
+              <div class="case__head" aria-hidden="true"><span></span><span>Hoje</span><span>Em 2033</span></div>
+              <p class="case__row case__row--red"><span><svg class="ico" aria-hidden="true"><use href="#i-recibo" /></svg>Tributo líquido</span><span>R$ 1.333,00</span><span>R$ 2.160,30</span></p>
+              <p class="case__row case__row--ok"><span><svg class="ico" aria-hidden="true"><use href="#i-ok" /></svg>Valor após tributos</span><span>R$ 8.667,00</span><span>R$ 8.667,00</span></p>
+              <p class="case__ok-note">Resultado preservado no exemplo, com custos constantes.</p>
+              <p class="case__note">Operação com alíquota padrão hipotética. Crédito futuro hipotético: R$ 175,00.</p>
+            </article>
+
+            <article class="case" id="caso-industria" aria-labelledby="aba-industria">
+              <h3>Indústria</h3>
+              <div class="case__big">
+                <div><p><svg class="ico" aria-hidden="true"><use href="#i-calc" /></svg>Cenário atual</p><strong>R$ 10.500,00</strong></div>
+                <div><p><svg class="ico" aria-hidden="true"><use href="#i-calc" /></svg>Preço para preservar o resultado</p><strong>R$ 10.277,78</strong></div>
+              </div>
+              <div class="case__head" aria-hidden="true"><span></span><span>Hoje</span><span>Em 2033</span></div>
+              <p class="case__row case__row--fall"><span><svg class="ico" aria-hidden="true"><use href="#i-recibo" /></svg>Tributo líquido</span><span>R$ 1.355,00</span><span>R$ 1.132,78</span></p>
+              <p class="case__row case__row--ok"><span><svg class="ico" aria-hidden="true"><use href="#i-ok" /></svg>Valor após tributos</span><span>R$ 9.145,00</span><span>R$ 9.145,00</span></p>
+              <p class="case__ok-note">Resultado preservado no exemplo, com custos constantes.</p>
+              <p class="case__note">Exemplo com tributos atuais e créditos informados. Crédito futuro hipotético: R$ 1.084,00.</p>
+            </article>
+
+            <article class="case" id="caso-agro" aria-labelledby="aba-agro">
+              <h3>Agroindústria de alimentos</h3>
+              <div class="case__big">
+                <div><p><svg class="ico" aria-hidden="true"><use href="#i-calc" /></svg>Cenário atual</p><strong>R$ 10.000,00</strong></div>
+                <div><p><svg class="ico" aria-hidden="true"><use href="#i-calc" /></svg>Preço para preservar o resultado</p><strong>R$ 9.121,98</strong></div>
+              </div>
+              <div class="case__head" aria-hidden="true"><span></span><span>Hoje</span><span>Em 2033</span></div>
+              <p class="case__row case__row--fall"><span><svg class="ico" aria-hidden="true"><use href="#i-recibo" /></svg>Tributo líquido</span><span>R$ 1.217,00</span><span>R$ 338,98</span></p>
+              <p class="case__row case__row--ok"><span><svg class="ico" aria-hidden="true"><use href="#i-ok" /></svg>Valor após tributos</span><span>R$ 8.783,00</span><span>R$ 8.783,00</span></p>
+              <p class="case__ok-note">Resultado preservado no exemplo, com custos constantes.</p>
+              <p class="case__note">Produto hipotético com redução de 60%. Crédito futuro hipotético: R$ 565,00.</p>
+            </article>
           </div>
+
+          <p class="slide-note">Exemplos didáticos com alíquota padrão hipotética de 27,5%. Os resultados não constituem previsão setorial nem análise individual.</p>
         </div>
       </section>
 
-      <!-- ============ LINHA DO TEMPO ============ -->
-      <section class="section" aria-labelledby="t-tempo">
+      <!-- ============ DETALHES QUE AMARGAM (slide 25) ============ -->
+      <section class="section navy" aria-labelledby="t-detalhes">
         <div class="wrap">
-          <div class="section__head">
-            <h2 class="reveal" id="t-tempo">A transição não acontece de uma vez</h2>
-            <p class="reveal" style="--i: 1">Oito anos em que os dois sistemas convivem. A aula mostra o que fazer em cada fase.</p>
-          </div>
-          <ol class="timeline" aria-label="Calendário da transição">
-            <li class="reveal">
-              <span class="timeline__year">2026</span>
-              <h3>Ano de teste</h3>
-              <p>CBS de 0,9% e IBS de 0,1% destacados na nota. A empresa precisa saber emitir e conferir.</p>
-            </li>
-            <li class="reveal" style="--i: 1">
-              <span class="timeline__year">2027–28</span>
-              <h3>A CBS entra</h3>
-              <p>Fim de PIS e Cofins, início do Imposto Seletivo e IPI reduzido a zero, com exceções.</p>
-            </li>
-            <li class="reveal" style="--i: 2">
-              <span class="timeline__year">2029–32</span>
-              <h3>O IBS cresce</h3>
-              <p>ICMS e ISS diminuem ano a ano. Benefícios fiscais de hoje perdem força.</p>
-            </li>
-            <li class="reveal" style="--i: 3">
-              <span class="timeline__year">2033</span>
-              <h3>Modelo pleno</h3>
-              <p>IBS e CBS completos. Fim de ICMS e ISS.</p>
-            </li>
-          </ol>
+          <div class="slide-top"><span>Marcus França</span><span>07</span></div>
+          <h2 class="slide-title reveal" id="t-detalhes">Os detalhes que podem amargar a conta</h2>
+          <ul class="rows slide-body">
+            <li class="row row--warn reveal"><span class="row__label"><svg class="ico" aria-hidden="true"><use href="#i-alerta" /></svg>Cadastro</span><span class="row__desc">Classificação fiscal inconsistente.</span></li>
+            <li class="row row--warn reveal" style="--i: 1"><span class="row__label"><svg class="ico" aria-hidden="true"><use href="#i-alerta" /></svg>Sistema</span><span class="row__desc">ERP sem parametrização para a operação.</span></li>
+            <li class="row row--warn reveal" style="--i: 2"><span class="row__label"><svg class="ico" aria-hidden="true"><use href="#i-alerta" /></svg>Conciliação</span><span class="row__desc">Documento, pagamento e crédito divergentes.</span></li>
+            <li class="row row--warn reveal" style="--i: 3"><span class="row__label"><svg class="ico" aria-hidden="true"><use href="#i-alerta" /></svg>Contrato</span><span class="row__desc">Alterações tributárias sem tratamento negociado.</span></li>
+          </ul>
         </div>
       </section>
 
-      <!-- ============ OFERTA ============ -->
-      <section class="section" id="oferta" aria-labelledby="t-oferta">
-        <div class="wrap offer">
-          <figure class="offer__media reveal">
-            <img
-              class="parallax"
-              src="img/marcus-palestra-1068.webp"
-              srcset="img/marcus-palestra-640.webp 640w, img/marcus-palestra-1068.webp 1068w"
-              sizes="(max-width: 900px) 100vw, 50vw"
-              width="1068"
-              height="1600"
-              alt="Marcus França falando ao microfone durante uma palestra"
-              loading="lazy"
-            />
-          </figure>
-          <div class="offer__box reveal" style="--i: 1">
-            <h2 id="t-oferta">Puxe uma cadeira</h2>
+      <!-- ============ OFERTA (slides 38 e 39) ============ -->
+      <section class="offer navy" id="oferta" aria-labelledby="t-oferta">
+        <figure class="offer__media">
+          <img
+            src="img/mesa-consultoria-1672.webp"
+            srcset="img/mesa-consultoria-900.webp 900w, img/mesa-consultoria-1672.webp 1672w"
+            sizes="(max-width: 960px) 100vw, 55vw"
+            width="1672"
+            height="941"
+            alt="Xícara de café fumegante sobre a mesa de um escritório, ao lado de um caderno"
+            loading="lazy"
+          />
+        </figure>
+        <div class="wrap offer__inner">
+          <div class="offer__box">
+            <p class="scene__label">Sua vaga à mesa</p>
+            <h2 id="t-oferta">Café com Reforma Tributária</h2>
+            <p class="offer__for">Para empresários</p>
             <ul class="includes">
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M10 8.5v7l6-3.5-6-3.5z" fill="currentColor" stroke="none" /></svg>
-                <div><strong>Aula gravada de 1 hora</strong><span>Assista no horário que funcionar para você.</span></div>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 3h7l5 5v13H7z" /><path d="M14 3v5h5M10 13h6M10 17h6" /></svg>
-                <div><strong>PDF com o resumo da aula</strong><span>Base legal, calendário e exemplos para consultar depois.</span></div>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" /><path d="M3 6l9 7 9-7" /></svg>
-                <div><strong>Atualizações sobre a reforma por e-mail</strong><span>A regulamentação continua saindo. Você fica sabendo do que muda.</span></div>
-              </li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-play" /></svg><div><strong>Aula gravada de 1 hora</strong><span>Assista no horário que funcionar para você.</span></div></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-doc" /></svg><div><strong>PDF com o resumo da aula</strong><span>Base legal, calendário e exemplos para consultar depois.</span></div></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-email" /></svg><div><strong>Atualizações sobre a reforma por e-mail</strong><span>A regulamentação continua saindo. Você fica sabendo do que muda.</span></div></li>
             </ul>
-
-            <div class="offer__price">
+            <div class="price offer__price">
               <span class="price__value num" data-preco>R$ 147</span>
               <span class="price__note" data-parcelas>à vista ou parcelado no cartão</span>
             </div>
-
-            <div class="offer__actions">
-              <a class="btn btn--big" href="#oferta" data-checkout="oferta">
-                Comprar a aula agora
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
-              </a>
-              <p class="secure">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="11" width="14" height="10" /><path d="M8 11V8a4 4 0 0 1 8 0v3" /></svg>
-                Pagamento seguro pela Cakto. O acesso chega no seu e-mail.
-              </p>
-            </div>
-
+            <a class="btn btn--wide" href="#oferta" data-checkout="oferta">
+              Quero assistir à aula
+              <svg class="ico" aria-hidden="true"><use href="#i-seta" /></svg>
+            </a>
+            <p class="offer__small"><svg class="ico" aria-hidden="true"><use href="#i-cadeado" /></svg>Pagamento seguro pela Cakto. O acesso chega no seu e-mail.</p>
             <div class="guarantee">
               <p class="guarantee__days">7<small>dias</small></p>
-              <p>
-                <strong>Garantia incondicional</strong>
-                Se a aula não for para você, peça o reembolso em até 7 dias depois da compra. Sem perguntas.
-              </p>
+              <p><strong>Garantia incondicional</strong>Se a aula não for para você, peça o reembolso em até 7 dias depois da compra.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ============ MARCUS ============ -->
-      <section class="section" id="marcus" aria-labelledby="t-marcus">
-        <div class="wrap host">
-          <div class="host__body">
-            <h2 class="reveal" id="t-marcus">Quem está à mesa com você</h2>
-            <p class="reveal" style="--i: 1">
-              Marcus Vinicius França é advogado especialista em Direito Tributário, com 20 anos de atuação
-              profissional. Olha para o imposto do mesmo jeito que o empresário olha para o negócio: pelo
-              efeito no resultado.
-            </p>
-            <blockquote class="reveal" style="--i: 2"><p>Eu não represento empresas, eu as fortaleço!</p></blockquote>
-            <dl class="stats reveal" style="--i: 3">
-              <div>
-                <dt>de atuação profissional</dt>
-                <dd>20 anos</dd>
-              </div>
-              <div>
-                <dt>especialista em</dt>
-                <dd>Direito Tributário</dd>
-              </div>
-            </dl>
+      <!-- ============ QUEM ESTÁ À MESA (slide 3) ============ -->
+      <section class="section navy" id="marcus" aria-labelledby="t-marcus">
+        <div class="wrap">
+          <div class="slide-top"><span>Marcus França</span><span>08</span></div>
+          <h2 class="slide-title reveal" id="t-marcus">Quem está à mesa com você</h2>
+          <div class="host">
+            <div class="host__text">
+              <p class="host__name reveal">Marcus Vinicius França</p>
+              <p class="reveal">Advogado especialista em Direito Tributário. 20 anos de atuação profissional.</p>
+              <p class="reveal">Uma visão empresarial sobre a relação entre tributação e resultado.</p>
+              <blockquote class="reveal"><p>“Eu não represento empresas, eu as fortaleço!”</p></blockquote>
+            </div>
+            <figure class="host__media reveal" style="--i: 1">
+              <img src="img/marcus-retrato.webp" width="456" height="620" alt="Retrato de Marcus França, de terno azul e braços cruzados" loading="lazy" />
+            </figure>
           </div>
-          <figure class="host__media reveal" style="--i: 1">
-            <img
-              class="parallax"
-              src="img/marcus-tela-1200.webp"
-              srcset="img/marcus-tela-640.webp 640w, img/marcus-tela-1200.webp 1200w"
-              sizes="(max-width: 900px) 100vw, 40vw"
-              width="1200"
-              height="1344"
-              alt="Marcus França analisando documentos fiscais na tela do computador"
-              loading="lazy"
-            />
-          </figure>
         </div>
       </section>
 
-      <!-- ============ FAQ ============ -->
-      <section class="section" id="perguntas" aria-labelledby="t-faq">
-        <div class="wrap faq">
-          <div class="faq__side">
-            <h2 class="reveal" id="t-faq">Antes de pedir o café</h2>
-            <p class="reveal" style="--i: 1">As dúvidas mais comuns sobre a aula, o acesso e a garantia.</p>
-          </div>
-          <div class="faq__list">
-            <details class="reveal">
-              <summary>A aula é ao vivo?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg></summary>
+      <!-- ============ DÚVIDAS ============ -->
+      <section class="section ivory" id="duvidas" aria-labelledby="t-duvidas">
+        <div class="wrap">
+          <div class="slide-top"><span>Marcus França</span><span>09</span></div>
+          <h2 class="slide-title reveal" id="t-duvidas">Antes de pedir o café</h2>
+          <div class="faq slide-body">
+            <details>
+              <summary><span><svg class="ico" aria-hidden="true"><use href="#i-pergunta" /></svg>A aula é ao vivo?</span><svg class="ico ico--toggle" aria-hidden="true"><use href="#i-mais" /></svg></summary>
               <div><p>Não. A aula é gravada e tem 1 hora de duração. Você assiste no horário que preferir.</p></div>
             </details>
-            <details class="reveal">
-              <summary>Como recebo o acesso?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg></summary>
+            <details>
+              <summary><span><svg class="ico" aria-hidden="true"><use href="#i-pergunta" /></svg>Como recebo o acesso?</span><svg class="ico ico--toggle" aria-hidden="true"><use href="#i-mais" /></svg></summary>
               <div><p>Depois que o pagamento é confirmado, o acesso à aula e ao PDF chega no e-mail que você usou na compra.</p></div>
             </details>
-            <details class="reveal">
-              <summary>Minha empresa é do Simples. A aula serve para mim?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg></summary>
-              <div>
-                <p>
-                  Sim. A aula trata da escolha entre recolher IBS/CBS dentro do Simples ou no regime regular, e do
-                  que precisa entrar nessa comparação: compras, perfil dos clientes, margem e conformidade.
-                </p>
-              </div>
+            <details>
+              <summary><span><svg class="ico" aria-hidden="true"><use href="#i-pergunta" /></svg>Minha empresa é do Simples. A aula serve para mim?</span><svg class="ico ico--toggle" aria-hidden="true"><use href="#i-mais" /></svg></summary>
+              <div><p>Sim. A aula trata da escolha entre recolher IBS/CBS no Simples ou no regime regular, e do que entra nessa comparação: compras, clientes, margem e conformidade.</p></div>
             </details>
-            <details class="reveal">
-              <summary>Os números dos exemplos valem para a minha empresa?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg></summary>
-              <div>
-                <p>
-                  Não diretamente. Os exemplos são didáticos e usam uma alíquota hipotética de 27,5%. O que você
-                  leva é o método: como montar a conta de preço, crédito e margem com os números da sua operação.
-                </p>
-              </div>
+            <details>
+              <summary><span><svg class="ico" aria-hidden="true"><use href="#i-pergunta" /></svg>Os números dos exemplos valem para a minha empresa?</span><svg class="ico ico--toggle" aria-hidden="true"><use href="#i-mais" /></svg></summary>
+              <div><p>Não diretamente. Os exemplos são didáticos e usam uma alíquota hipotética de 27,5%. O que você leva é o método para montar a conta com os números da sua operação.</p></div>
             </details>
-            <details class="reveal">
-              <summary>Como funciona a garantia?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg></summary>
+            <details>
+              <summary><span><svg class="ico" aria-hidden="true"><use href="#i-pergunta" /></svg>Como funciona a garantia?</span><svg class="ico ico--toggle" aria-hidden="true"><use href="#i-mais" /></svg></summary>
               <div><p>Você tem 7 dias depois da compra para pedir o reembolso, por qualquer motivo. O valor é devolvido integralmente.</p></div>
             </details>
-            <details class="reveal">
-              <summary>A aula substitui uma consultoria?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg></summary>
-              <div>
-                <p>
-                  Não. A aula é conteúdo educacional. Para olhar os números da sua empresa e decidir o que precisa
-                  de atenção, Marcus conduz a Consultoria Nova Reforma Tributária, contratada à parte.
-                </p>
-              </div>
+            <details>
+              <summary><span><svg class="ico" aria-hidden="true"><use href="#i-pergunta" /></svg>A aula substitui uma consultoria?</span><svg class="ico ico--toggle" aria-hidden="true"><use href="#i-mais" /></svg></summary>
+              <div><p>Não. A aula é conteúdo educacional. Para olhar os números da sua empresa, Marcus conduz a Consultoria Nova Reforma Tributária, contratada à parte.</p></div>
             </details>
-            <details class="reveal">
-              <summary>O que são as atualizações por e-mail?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg></summary>
-              <div>
-                <p>
-                  A reforma ainda está sendo regulamentada. Quando sair algo que mude o que foi visto na aula,
-                  você recebe a atualização no seu e-mail.
-                </p>
-              </div>
+            <details>
+              <summary><span><svg class="ico" aria-hidden="true"><use href="#i-pergunta" /></svg>O que são as atualizações por e-mail?</span><svg class="ico ico--toggle" aria-hidden="true"><use href="#i-mais" /></svg></summary>
+              <div><p>A reforma ainda está sendo regulamentada. Quando sair algo que mude o que foi visto na aula, você recebe a atualização no seu e-mail.</p></div>
             </details>
           </div>
         </div>
       </section>
 
-      <!-- ============ FECHAMENTO ============ -->
-      <section class="closing" aria-labelledby="t-fecho">
-        <div class="wrap closing__inner">
-          <h2 class="reveal" id="t-fecho">Faça a conta antes de mudar o preço.</h2>
-          <div class="closing__action reveal" style="--i: 1">
-            <p>
-              1 hora de aula, o PDF com o resumo e as atualizações por e-mail, por
-              <strong class="num" data-preco>R$ 147</strong>.
-            </p>
-            <a class="btn btn--big" href="#oferta" data-checkout="fechamento">
-              Quero assistir à aula
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
-            </a>
-          </div>
+      <!-- ============ FECHAMENTO (slide 2) ============ -->
+      <section class="scene" aria-labelledby="t-fecho">
+        <figure class="scene__media">
+          <img
+            src="img/mesa-tax-scale-1672.webp"
+            srcset="img/mesa-tax-scale-900.webp 900w, img/mesa-tax-scale-1672.webp 1672w"
+            sizes="100vw"
+            width="1672"
+            height="941"
+            alt=""
+            loading="lazy"
+          />
+        </figure>
+        <div class="scene__text">
+          <p class="scene__label reveal">Nossa próxima conversa</p>
+          <h2 class="reveal" id="t-fecho">Puxe uma cadeira</h2>
+          <hr class="gold-rule reveal" />
+          <p class="scene__lead reveal" style="--i: 1">
+            1 hora de aula, o PDF com o resumo e as atualizações por e-mail, por <span class="num" data-preco>R$ 147</span>.
+          </p>
+          <a class="btn btn--wide reveal" style="--i: 2" href="#oferta" data-checkout="fechamento">
+            Quero assistir à aula
+            <svg class="ico" aria-hidden="true"><use href="#i-seta" /></svg>
+          </a>
+        </div>
+      </section>
+
+      <!-- ============ REFERÊNCIAS (slide 37) ============ -->
+      <section class="section ivory" aria-labelledby="t-refs">
+        <div class="wrap">
+          <div class="slide-top"><span>Marcus França</span><span>10</span></div>
+          <h2 class="slide-title" id="t-refs">Para continuar a conversa com segurança</h2>
+          <dl class="refs slide-body">
+            <div>
+              <dt>Base do consumo</dt>
+              <dd>
+                <a class="link" href="https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc132.htm" target="_blank" rel="noopener">EC 132/2023</a>
+                <a class="link" href="https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm" target="_blank" rel="noopener">LC 214/2025</a>
+                <a class="link" href="https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp227.htm" target="_blank" rel="noopener">LC 227/2026</a>
+              </dd>
+            </div>
+            <div>
+              <dt>Contexto de renda</dt>
+              <dd>
+                <a class="link" href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15270.htm" target="_blank" rel="noopener">Lei 15.270/2025</a>
+                <a class="link" href="https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp224.htm" target="_blank" rel="noopener">LC 224/2025</a>
+                <a class="link" href="https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2600263" target="_blank" rel="noopener">PLP 5/2026</a>
+              </dd>
+            </div>
+            <div>
+              <dt>Rotina e transição</dt>
+              <dd>
+                <a class="link" href="https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/julho/receita-federal-e-comite-gestor-do-ibs-publicam-o-cronograma-de-implementacao-dos-documentos-fiscais-eletronicos-da-reforma-tributaria-do-consumo" target="_blank" rel="noopener">Cronograma RFB/CGIBS</a>
+                <a class="link" href="https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/setembro/comunicado-5" target="_blank" rel="noopener">RFB: testes do split payment</a>
+                <a class="link" href="https://cfc.org.br/noticias/cgsn-prorroga-prazos-do-simples-nacional-e-do-regime-de-ibs-e-cbs/" target="_blank" rel="noopener">CFC: opções para 2027</a>
+              </dd>
+            </div>
+          </dl>
+          <p class="slide-note">Conteúdo editorial atualizado em 14/10/2026. Cenas de Marcus em casa: simulações por IA. Retrato institucional: foto original.</p>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="wrap">
-        <p class="footer__name">Café com Reforma Tributária</p>
-        <div class="footer__cols">
-          <div>
-            <p>Uma aula de Marcus França.</p>
-            <p>© 2026. Todos os direitos reservados.</p>
-          </div>
-          <div>
-            <p>
-              Conteúdo educacional, atualizado em 14/10/2026. Os exemplos usam alíquota hipotética de 27,5% e não
-              substituem a análise da sua operação.
-            </p>
-          </div>
-          <div>
-            <p>
-              Base legal:
-              <a class="link" href="https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc132.htm" target="_blank" rel="noopener">EC 132/2023</a>,
-              <a class="link" href="https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm" target="_blank" rel="noopener">LC 214/2025</a> e
-              <a class="link" href="https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp227.htm" target="_blank" rel="noopener">LC 227/2026</a>.
-            </p>
-            <p>Fotos: acervo de Marcus França.</p>
-          </div>
+    <footer class="footer navy">
+      <div class="wrap footer__inner">
+        <div>
+          <p>Café com Reforma Tributária</p>
+          <p>Uma conversa com Marcus França. © 2026.</p>
         </div>
+        <p>Conteúdo educacional. Os exemplos usam alíquota hipotética e não substituem a análise da sua operação.</p>
       </div>
     </footer>
 

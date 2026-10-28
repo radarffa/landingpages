@@ -82,10 +82,9 @@
       aliquota: document.getElementById("r-aliquota"),
       imposto: document.getElementById("r-imposto"),
       total: document.getElementById("r-total"),
+      cliente: document.getElementById("r-cliente"),
       fornecedor: document.getElementById("r-fornecedor"),
       tributo: document.getElementById("r-tributo"),
-      barraLiquido: document.getElementById("barra-liquido"),
-      barraTributo: document.getElementById("barra-tributo"),
     };
     var pct = new Intl.NumberFormat("pt-BR", { maximumFractionDigits: 2 });
 
@@ -113,13 +112,9 @@
       saidas.aliquota.textContent = pct.format(aliquota * 100) + "%";
       saidas.imposto.textContent = brl.format(imposto);
       saidas.total.textContent = brl.format(total);
+      saidas.cliente.textContent = brl.format(total);
       saidas.fornecedor.textContent = brl.format(valor);
       saidas.tributo.textContent = brl.format(imposto);
-
-      var parteLiquida = total > 0 ? (valor / total) * 100 : 100;
-      saidas.barraLiquido.style.flexBasis = parteLiquida.toFixed(2) + "%";
-      saidas.barraLiquido.textContent = total > 0 ? Math.round(parteLiquida) + "%" : "";
-      saidas.barraTributo.textContent = total > 0 ? Math.round(100 - parteLiquida) + "%" : "";
     }
 
     campoValor.addEventListener("input", calcular);
@@ -187,31 +182,53 @@
     if (fecho) vigia.observe(fecho);
   }
 
-  /* ---------- Paralaxe leve nas fotos ---------- */
+  /* ---------- Casos por setor (abas) ----------
+     Sem JavaScript, os quatro casos aparecem em sequência. */
 
-  var fotos = document.querySelectorAll(".parallax");
-  if (!reduzir && fotos.length) {
-    var pendente = false;
-    function mover() {
-      pendente = false;
-      var h = window.innerHeight;
-      fotos.forEach(function (img) {
-        var r = img.parentElement.getBoundingClientRect();
-        if (r.bottom < 0 || r.top > h) return;
-        var p = (r.top + r.height / 2 - h / 2) / h;
-        img.style.transform = "translateY(" + (p * -36).toFixed(1) + "px) scale(1.08)";
-      });
-    }
-    window.addEventListener(
-      "scroll",
-      function () {
-        if (!pendente) {
-          pendente = true;
-          window.requestAnimationFrame(mover);
+  var abas = document.querySelector(".tabs");
+  if (abas) {
+    var botoes = Array.prototype.slice.call(abas.querySelectorAll('[role="tab"]'));
+    var paineis = botoes.map(function (b) {
+      return document.getElementById(b.getAttribute("aria-controls"));
+    });
+
+    function selecionar(indice, focar) {
+      botoes.forEach(function (b, i) {
+        var ativo = i === indice;
+        b.setAttribute("aria-selected", ativo ? "true" : "false");
+        b.tabIndex = ativo ? 0 : -1;
+        paineis[i].hidden = !ativo;
+        if (ativo) {
+          paineis[i].classList.remove("is-entering");
+          void paineis[i].offsetWidth;
+          paineis[i].classList.add("is-entering");
         }
-      },
-      { passive: true }
-    );
-    mover();
+      });
+      if (focar) botoes[indice].focus();
+    }
+
+    botoes.forEach(function (b, i) {
+      b.addEventListener("click", function () {
+        selecionar(i, false);
+      });
+      b.addEventListener("keydown", function (e) {
+        var alvo = null;
+        if (e.key === "ArrowRight") alvo = (i + 1) % botoes.length;
+        if (e.key === "ArrowLeft") alvo = (i - 1 + botoes.length) % botoes.length;
+        if (e.key === "Home") alvo = 0;
+        if (e.key === "End") alvo = botoes.length - 1;
+        if (alvo !== null) {
+          e.preventDefault();
+          selecionar(alvo, true);
+        }
+      });
+    });
+
+    abas.hidden = false;
+    paineis.forEach(function (p) {
+      p.setAttribute("role", "tabpanel");
+      p.tabIndex = 0;
+    });
+    selecionar(0, false);
   }
 })();
