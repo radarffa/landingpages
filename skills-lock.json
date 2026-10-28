@@ -7,6 +7,12 @@
       "skillPath": "plugins/pwdev-copy/skills/copy-page/SKILL.md",
       "computedHash": "de5e06db2156fb00cd06c994d49e336edb2b02a94c015b584b557181b3033e28"
     },
+    "frontend-ui-engineering": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-ui-engineering/SKILL.md",
+      "computedHash": "49bb6ccfc41753bdd679f368ce75629ae9d424c5b8abc33faf949a4a55f919a1"
+    },
     "landing-page-design": {
       "source": "101-skills/skills",
       "sourceType": "github",
