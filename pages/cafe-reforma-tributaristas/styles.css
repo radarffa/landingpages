@@ -1594,3 +1594,416 @@ fieldset.field {
     transform: none;
   }
 }
+
+/* ============================================================
+   Componentes de venda (inspirados em páginas de alta conversão,
+   adaptados à identidade do PDF)
+   ============================================================ */
+
+/* Barra de aviso no topo */
+.announce {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4px 14px;
+  margin: 0;
+  padding: 9px var(--margin);
+  background: var(--gold);
+  color: var(--on-gold);
+  font-size: 0.875rem;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.announce a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.announce .ico {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2.2;
+}
+
+.announce a:focus-visible {
+  outline-color: var(--navy);
+}
+
+.hero .scene__text {
+  padding-top: 168px;
+}
+
+/* Palavras em destaque */
+.hl {
+  color: var(--gold);
+}
+
+.ivory .hl {
+  color: #8a6d2c;
+}
+
+.scene__lead strong {
+  color: var(--on-navy);
+  font-weight: 600;
+}
+
+/* Cartão de oferta (claro, sobre o navy) */
+.offer-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 22px 24px 24px;
+  background: var(--ivory);
+  color: var(--ink);
+  max-width: 520px;
+}
+
+.offer-card__top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 14px 24px;
+}
+
+.offer-card__label {
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+
+.offer-card .price__value {
+  margin-top: 6px;
+}
+
+.offer-card .price__note {
+  color: var(--ink-2);
+}
+
+.offer-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: var(--step-small);
+}
+
+.offer-card__list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.offer-card__list .ico,
+.checklist .ico {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2.4;
+  color: var(--green);
+}
+
+.btn--block {
+  width: 100%;
+}
+
+.offer-card :focus-visible {
+  outline-color: var(--ink);
+}
+
+.offer-card__foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 24px;
+  font-size: 0.8125rem;
+  color: var(--ink-2);
+}
+
+.offer-card__foot span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.offer-card__foot .ico {
+  width: 16px;
+  height: 16px;
+}
+
+.offer-card--wide {
+  max-width: 600px;
+}
+
+/* Diagrama do problema: a lei, a conta, o caixa */
+.gap {
+  display: grid;
+  grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+  gap: clamp(36px, 6vw, 96px);
+  align-items: center;
+}
+
+.gap .slide-title {
+  margin-top: 0;
+}
+
+.gap__text {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.gap__lead {
+  font-size: var(--step-lead);
+  line-height: 1.5;
+  color: var(--on-navy-2);
+}
+
+.gap__lead strong {
+  color: var(--on-navy);
+  font-weight: 500;
+}
+
+.gap__chart {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.gap__chart p {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.gap__chart strong {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.gap__chart span {
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--on-navy-2);
+}
+
+.gap__bar {
+  height: 14px;
+  margin: 10px 0 8px;
+  background: var(--navy-card);
+  position: relative;
+  overflow: hidden;
+}
+
+.gap__bar::after {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  transform-origin: left;
+  transition: transform 1.2s var(--ease-out);
+}
+
+.gap__bar--full::after {
+  width: 100%;
+  background: var(--on-navy-2);
+}
+
+.gap__bar--gold::after {
+  width: 38%;
+  background: var(--gold);
+}
+
+.gap__bar--dim::after {
+  width: 64%;
+  background: var(--navy-rule);
+}
+
+.js .gap__chart:not(.is-in) .gap__bar::after {
+  transform: scaleX(0);
+}
+
+.gap__chart small {
+  color: var(--on-navy-2);
+  font-size: var(--step-small);
+}
+
+@media (max-width: 860px) {
+  .gap {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Chamada no meio da página */
+.mid-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(40px, 5vw, 64px);
+}
+
+/* Dois pilares */
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(20px, 3vw, 36px);
+}
+
+.pillar {
+  display: flex;
+  flex-direction: column;
+  background: var(--navy-card);
+}
+
+.pillar__media {
+  margin: 0;
+  aspect-ratio: 16 / 7;
+  overflow: hidden;
+}
+
+.pillar__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70% 40%;
+  transition: transform 600ms var(--ease-out);
+}
+
+.pillar:hover .pillar__media img {
+  transform: scale(1.04);
+}
+
+.pillar__body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: clamp(22px, 2.6vw, 34px);
+}
+
+.pillar h3 {
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+}
+
+.pillar__sub {
+  color: var(--on-navy-2);
+  font-size: var(--step-small);
+  margin-bottom: 12px;
+}
+
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checklist li {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+
+.checklist .ico {
+  margin-top: 3px;
+  color: var(--gold);
+}
+
+.checklist--light {
+  font-size: var(--step-lead);
+}
+
+.checklist--light strong {
+  font-weight: 600;
+}
+
+@media (max-width: 860px) {
+  .pillars {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Números de autoridade */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin: clamp(40px, 5vw, 64px) 0 0;
+}
+
+.stats div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 24px 16px;
+  background: var(--navy-card);
+  text-align: center;
+}
+
+.stats dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.05;
+  color: var(--gold);
+}
+
+.stats dt {
+  color: var(--on-navy-2);
+  font-size: var(--step-small);
+}
+
+@media (max-width: 720px) {
+  .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Caixa de destaque */
+.highlight-box {
+  align-self: flex-start;
+  padding: 18px 24px;
+  background: var(--gold);
+  color: var(--on-gold);
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.6vw, 2.25rem);
+  line-height: 1.15;
+}
+
+/* Dúvidas centralizadas */
+.faq-wrap {
+  max-width: calc(880px + 2 * var(--margin));
+}
+
+.center-label {
+  text-align: center;
+  font-size: var(--step-label);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+
+.slide-title.center {
+  margin-top: 16px;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .announce {
+    font-size: 0.8125rem;
+  }
+
+  .hero .scene__text {
+    padding-top: 36px;
+  }
+
+  .offer-card {
+    padding: 18px;
+  }
+}

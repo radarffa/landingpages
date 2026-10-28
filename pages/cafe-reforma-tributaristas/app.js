@@ -159,7 +159,7 @@
   /* ---------- Barra de compra no celular ---------- */
 
   var barra = document.querySelector(".buybar");
-  var heroOferta = document.querySelector(".hero__offer");
+  var heroOferta = document.querySelector(".hero .offer-card");
   var secaoOferta = document.getElementById("oferta");
   if (barra && heroOferta && "IntersectionObserver" in window) {
     var visiveis = new Set();

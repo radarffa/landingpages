@@ -17,7 +17,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Marcellus&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Marcellus&display=swap" />
     <link rel="preload" as="image" href="img/cena-coado-1672.webp" imagesrcset="img/cena-coado-900.webp 900w, img/cena-coado-1672.webp 1672w" imagesizes="100vw" />
     <link rel="stylesheet" href="styles.css" />
 
@@ -39,10 +39,10 @@
     <!-- Ícones (traço fino, como no PDF) -->
     <svg width="0" height="0" style="position: absolute" aria-hidden="true">
       <symbol id="i-seta" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
-      <symbol id="i-agenda" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="1.5" /><path d="M3.5 9.5h17M8 3v4M16 3v4M8 13h.01M12 13h.01M16 13h.01M8 16.5h.01M12 16.5h.01M16 16.5h.01" /></symbol>
       <symbol id="i-calc" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="1.5" /><path d="M8 7h8M8.5 11h.01M12 11h.01M15.5 11h.01M8.5 14.5h.01M12 14.5h.01M15.5 14.5h.01M8.5 18h.01M12 18h.01M15.5 18h.01" /></symbol>
       <symbol id="i-recibo" viewBox="0 0 24 24"><path d="M6 3h12v18l-2-1.5L14 21l-2-1.5L10 21l-2-1.5L6 21z" /><path d="M9 8h6M9 11.5h6M9 15h4" /></symbol>
       <symbol id="i-ok" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M8.5 12.2l2.4 2.4 4.6-4.8" /></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7" /></symbol>
       <symbol id="i-x" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M9.2 9.2l5.6 5.6M14.8 9.2l-5.6 5.6" /></symbol>
       <symbol id="i-alerta" viewBox="0 0 24 24"><path d="M12 4l9 16H3z" /><path d="M12 10v4.5M12 17.2h.01" /></symbol>
       <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7z" /><path d="M14 3v5h5M10 13h6M10 17h6" /></symbol>
@@ -51,16 +51,19 @@
       <symbol id="i-escudo" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6z" /><path d="M8.7 12l2.3 2.3 4.3-4.6" /></symbol>
       <symbol id="i-cadeado" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="1.5" /><path d="M8 11V8a4 4 0 0 1 8 0v3" /></symbol>
       <symbol id="i-mais" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></symbol>
-      <symbol id="i-pergunta" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M9.6 9.3a2.5 2.5 0 1 1 3.3 2.4c-.6.2-.9.7-.9 1.3v.8M12 16.8h.01" /></symbol>
     </svg>
 
     <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
     <header class="topbar">
+      <p class="announce">
+        <span>A CBS começa em 2027, e PIS e Cofins deixam de existir.</span>
+        <a href="#oferta">Prepare a sua empresa agora <svg class="ico" aria-hidden="true"><use href="#i-seta" /></svg></a>
+      </p>
       <div class="wrap topbar__inner">
         <a class="topbar__label" href="#topo">Café com Reforma</a>
         <nav aria-label="Seções">
-          <a href="#em-jogo">O que está em jogo</a>
+          <a href="#problema">O problema</a>
           <a href="#guardanapo">Faça a conta</a>
           <a href="#marcus">Marcus França</a>
           <a href="#duvidas">Dúvidas</a>
@@ -84,69 +87,76 @@
           />
         </figure>
         <div class="scene__text">
-          <p class="scene__label">Aula gravada · Marcus França</p>
-          <h1 id="titulo">Antes de mexer no preço, faça a conta</h1>
-          <hr class="gold-rule" />
+          <p class="scene__label">Para quem decide preço, compras e contratos</p>
+          <h1 id="titulo">Antes de mexer no preço, <span class="hl">faça a conta</span></h1>
           <p class="scene__lead">
-            Em 1 hora, Marcus França mostra o que a reforma muda no preço, no crédito e no caixa da sua empresa.
+            Em 1 hora, Marcus França mostra o que a Reforma Tributária muda no <strong>preço</strong>, no
+            <strong>crédito</strong> e no <strong>caixa</strong> da sua empresa.
           </p>
-          <div class="hero__offer">
-            <a class="btn" href="#oferta" data-checkout="capa">
+          <div class="offer-card">
+            <div class="offer-card__top">
+              <div class="price">
+                <span class="offer-card__label">Aula gravada · 1 hora</span>
+                <span class="price__value num" data-preco>R$ 147</span>
+                <span class="price__note" data-parcelas>à vista ou parcelado no cartão</span>
+              </div>
+              <ul class="offer-card__list">
+                <li><svg class="ico" aria-hidden="true"><use href="#i-check" /></svg>PDF com o resumo</li>
+                <li><svg class="ico" aria-hidden="true"><use href="#i-check" /></svg>Atualizações por e-mail</li>
+                <li><svg class="ico" aria-hidden="true"><use href="#i-check" /></svg>Garantia de 7 dias</li>
+              </ul>
+            </div>
+            <a class="btn btn--block" href="#oferta" data-checkout="capa">
               Quero assistir à aula
               <svg class="ico" aria-hidden="true"><use href="#i-seta" /></svg>
             </a>
-            <div class="price">
-              <span class="price__value num" data-preco>R$ 147</span>
-              <span class="price__note" data-parcelas>à vista ou parcelado no cartão</span>
-            </div>
           </div>
-          <ul class="hero__facts">
-            <li><svg class="ico" aria-hidden="true"><use href="#i-play" /></svg>1 hora, gravada</li>
-            <li><svg class="ico" aria-hidden="true"><use href="#i-doc" /></svg>PDF com o resumo</li>
-            <li><svg class="ico" aria-hidden="true"><use href="#i-email" /></svg>Atualizações por e-mail</li>
-            <li><svg class="ico" aria-hidden="true"><use href="#i-escudo" /></svg>Garantia de 7 dias</li>
-          </ul>
         </div>
       </section>
 
-      <!-- ============ AS PERGUNTAS DO EMPRESÁRIO ============ -->
-      <section class="scene" aria-labelledby="t-perguntas">
-        <figure class="scene__media">
-          <img
-            src="img/cena-conversa-1672.webp"
-            srcset="img/cena-conversa-900.webp 900w, img/cena-conversa-1672.webp 1672w"
-            sizes="100vw"
-            width="1672"
-            height="940"
-            alt="Marcus França à mesa, com xícaras de café, explicando um ponto"
-            loading="lazy"
-          />
-        </figure>
-        <div class="scene__text">
-          <p class="scene__label reveal">Puxe uma cadeira</p>
-          <h2 class="reveal" id="t-perguntas">Muita sigla. Poucas respostas para quem decide.</h2>
-          <ul class="questions-list reveal" style="--i: 1">
-            <li>O meu preço vai mudar?</li>
-            <li>Quanto dinheiro vou precisar no caixa?</li>
-            <li>O que devo revisar nos contratos?</li>
-          </ul>
-          <p class="reveal" style="--i: 2">
-            Se essas perguntas já chegaram à sua mesa, esta aula foi feita para você. E o calendário não espera: em 2027 começa a
-            CBS, e PIS e Cofins deixam de existir.
-          </p>
+      <!-- ============ O PROBLEMA ============ -->
+      <section class="section navy" id="problema" aria-labelledby="t-problema">
+        <div class="wrap">
+          <div class="slide-top"><span>01 · O problema</span><span>Marcus França</span></div>
+          <div class="gap slide-body">
+            <div class="gap__text">
+              <h2 class="slide-title reveal" id="t-problema">Entre a lei e o seu caixa, <span class="hl">existe uma conta</span></h2>
+              <p class="gap__lead reveal" style="--i: 1">
+                Sobram siglas, alíquotas e prazos. Mas, para quem empreende, as perguntas chegam de um jeito bem direto:
+                <strong>o meu preço vai mudar? Quanto dinheiro vou precisar no caixa? O que devo revisar nos contratos?</strong>
+              </p>
+              <p class="reveal" style="--i: 2">A resposta não está na alíquota. Está na conta que liga a regra à operação da sua empresa.</p>
+            </div>
+            <ol class="gap__chart reveal" style="--i: 1" aria-label="Da lei ao caixa">
+              <li>
+                <p><strong>A lei</strong><span>EC 132 · LC 214 · LC 227</span></p>
+                <div class="gap__bar gap__bar--full"></div>
+                <small>Siglas, alíquotas e prazos.</small>
+              </li>
+              <li>
+                <p><strong class="hl">A conta</strong><span>Preço · crédito · margem</span></p>
+                <div class="gap__bar gap__bar--gold"></div>
+                <small>Onde a regra encontra a sua operação.</small>
+              </li>
+              <li>
+                <p><strong>O caixa</strong><span>Resultado</span></p>
+                <div class="gap__bar gap__bar--dim"></div>
+                <small>Onde o efeito aparece.</small>
+              </li>
+            </ol>
+          </div>
         </div>
       </section>
 
       <!-- ============ O QUE ESTÁ EM JOGO ============ -->
-      <section class="section navy" id="em-jogo" aria-labelledby="t-em-jogo">
+      <section class="section navy" aria-labelledby="t-em-jogo" style="padding-top: 0">
         <div class="wrap">
-          <div class="slide-top"><span>O que está em jogo</span><span>01</span></div>
-          <h2 class="slide-title reveal" id="t-em-jogo">Os detalhes que podem amargar a conta</h2>
-          <p class="slide-sub reveal" style="--i: 1">A reforma não chega só como imposto novo. Ela chega ao preço, à compra, ao contrato e ao dinheiro disponível para pagar as contas.</p>
+          <div class="slide-top"><span>02 · O que está em jogo</span><span>Marcus França</span></div>
+          <h2 class="slide-title reveal" id="t-em-jogo">Os detalhes que podem <span class="hl">amargar a conta</span></h2>
           <ul class="rows slide-body">
             <li class="row row--warn reveal">
               <span class="row__label"><svg class="ico" aria-hidden="true"><use href="#i-alerta" /></svg>Preço</span>
-              <span class="row__desc">Uma mudança no imposto não vira automaticamente um reajuste do mesmo tamanho. Reajustar pela alíquota pode levar a uma conclusão errada sobre preço e resultado.</span>
+              <span class="row__desc">Uma mudança no imposto não vira automaticamente um reajuste do mesmo tamanho. Olhar só para a alíquota pode levar a uma conclusão errada sobre preço e resultado.</span>
             </li>
             <li class="row row--warn reveal" style="--i: 1">
               <span class="row__label"><svg class="ico" aria-hidden="true"><use href="#i-alerta" /></svg>Caixa</span>
@@ -165,14 +175,17 @@
               <span class="row__desc">Um contrato de longo prazo atravessa etapas diferentes da transição. O ajuste depende do que foi combinado e do que ainda será negociado.</span>
             </li>
           </ul>
+          <div class="mid-cta">
+            <a class="btn" href="#oferta" data-checkout="problema">Quero fazer essa conta <svg class="ico" aria-hidden="true"><use href="#i-seta" /></svg></a>
+          </div>
         </div>
       </section>
 
       <!-- ============ FAÇA A CONTA ============ -->
       <section class="section ivory" id="guardanapo" aria-labelledby="t-guardanapo">
         <div class="wrap">
-          <div class="slide-top"><span>Experimente agora</span><span>02</span></div>
-          <h2 class="slide-title reveal" id="t-guardanapo">A primeira conta cabe no guardanapo</h2>
+          <div class="slide-top"><span>03 · Experimente agora</span><span>Marcus França</span></div>
+          <h2 class="slide-title reveal" id="t-guardanapo">A primeira conta <span class="hl">cabe no guardanapo</span></h2>
           <p class="slide-sub reveal" style="--i: 1">Digite o valor de uma venda da sua empresa e veja o preço total ao cliente e quanto chega até você com o split payment.</p>
 
           <div class="napkin slide-body">
@@ -244,8 +257,8 @@
           />
         </figure>
         <div class="scene__text">
-          <p class="scene__label reveal">A conta na mesa</p>
-          <h2 class="reveal" id="t-conta-mesa">Nem todo preço sobe</h2>
+          <p class="scene__label reveal">04 · A conta na mesa</p>
+          <h2 class="reveal" id="t-conta-mesa">Nem todo <span class="hl">preço sobe</span></h2>
           <hr class="gold-rule reveal" />
           <p class="scene__lead reveal" style="--i: 1">
             Nos quatro exemplos da aula, o preço que preserva o resultado sobe em dois setores e cai em outros dois. A alíquota,
@@ -256,7 +269,7 @@
 
       <section class="section ivory" aria-labelledby="t-casos">
         <div class="wrap">
-          <div class="slide-top"><span>Exemplos da aula</span><span>03</span></div>
+          <div class="slide-top"><span>Exemplos da aula</span><span>Marcus França</span></div>
           <h2 class="slide-title reveal" id="t-casos">Quanto cobrar para manter o mesmo resultado?</h2>
           <p class="slide-sub reveal" style="--i: 1">Modelo pleno de 2033, custos constantes. Escolha um setor.</p>
 
@@ -318,30 +331,63 @@
           </div>
 
           <p class="slide-note">Exemplos didáticos com alíquota padrão hipotética de 27,5%. Não são previsão setorial nem análise individual. Na aula, Marcus mostra como cada número foi calculado, para você aplicar o método aos dados da sua empresa.</p>
+          <div class="mid-cta">
+            <a class="btn" href="#oferta" data-checkout="casos">Quero aprender o método <svg class="ico" aria-hidden="true"><use href="#i-seta" /></svg></a>
+          </div>
         </div>
       </section>
 
-      <!-- ============ O QUE VOCÊ LEVA ============ -->
-      <section class="section navy" aria-labelledby="t-leva">
+      <!-- ============ COMO FUNCIONA: DOIS PILARES ============ -->
+      <section class="section navy" aria-labelledby="t-pilares">
         <div class="wrap">
-          <div class="slide-top"><span>O que você leva deste café</span><span>04</span></div>
-          <h2 class="slide-title reveal" id="t-leva">Você sai sabendo o que perguntar e o que conferir</h2>
-          <ul class="rows slide-body">
-            <li class="row reveal"><span class="row__label"><svg class="ico" aria-hidden="true"><use href="#i-ok" /></svg>Preço</span><span class="row__desc">Como calcular o preço que preserva o valor depois dos tributos, antes de aumentar ou reduzir o que você cobra.</span></li>
-            <li class="row reveal" style="--i: 1"><span class="row__label"><svg class="ico" aria-hidden="true"><use href="#i-ok" /></svg>Compras</span><span class="row__desc">Como comparar propostas pelo custo depois do crédito e do prazo de pagamento, e não só pelo preço da nota.</span></li>
-            <li class="row reveal" style="--i: 2"><span class="row__label"><svg class="ico" aria-hidden="true"><use href="#i-ok" /></svg>Caixa</span><span class="row__desc">O que o split payment muda no capital de giro, e por que receber menos dinheiro nessa etapa não significa, por si só, perder lucro.</span></li>
-            <li class="row reveal" style="--i: 3"><span class="row__label"><svg class="ico" aria-hidden="true"><use href="#i-ok" /></svg>Simples Nacional</span><span class="row__desc">O que comparar para decidir entre recolher IBS/CBS no Simples ou no regime regular: compras, perfil dos clientes, margem e obrigações.</span></li>
-            <li class="row reveal" style="--i: 4"><span class="row__label"><svg class="ico" aria-hidden="true"><use href="#i-ok" /></svg>Calendário</span><span class="row__desc">O que muda em 2026, 2027, de 2029 a 2032 e em 2033, e por que uma simulação para 2027 não pode copiar a conta do modelo completo.</span></li>
-            <li class="row reveal" style="--i: 5"><span class="row__label"><svg class="ico" aria-hidden="true"><use href="#i-ok" /></svg>Próximos passos</span><span class="row__desc">Uma lista de pontos concretos para levar ao contador, ao financeiro e ao comercial: cadastro, sistema, contratos e benefícios de ICMS.</span></li>
-          </ul>
+          <div class="slide-top"><span>05 · Como funciona</span><span>Marcus França</span></div>
+          <h2 class="slide-title reveal" id="t-pilares">O que você leva <span class="hl">deste café</span></h2>
+          <div class="pillars slide-body">
+            <article class="pillar reveal">
+              <figure class="pillar__media">
+                <img src="img/cena-conversa-900.webp" width="900" height="506" alt="Marcus França explicando um ponto à mesa, com xícaras de café" loading="lazy" />
+              </figure>
+              <div class="pillar__body">
+                <h3><span class="hl">I</span> · Na aula</h3>
+                <p class="pillar__sub">1 hora, gravada, para assistir quando quiser</p>
+                <ul class="checklist">
+                  <li><svg class="ico" aria-hidden="true"><use href="#i-check" /></svg>Como calcular o preço que preserva o valor depois dos tributos</li>
+                  <li><svg class="ico" aria-hidden="true"><use href="#i-check" /></svg>Como comparar fornecedores pelo custo depois do crédito</li>
+                  <li><svg class="ico" aria-hidden="true"><use href="#i-check" /></svg>O que o split payment muda no capital de giro</li>
+                  <li><svg class="ico" aria-hidden="true"><use href="#i-check" /></svg>Simples Nacional: IBS/CBS no Simples ou no regime regular</li>
+                  <li><svg class="ico" aria-hidden="true"><use href="#i-check" /></svg>O calendário de 2026 a 2033, fase por fase</li>
+                  <li><svg class="ico" aria-hidden="true"><use href="#i-check" /></svg>Os quatro exemplos de preço, explicados passo a passo</li>
+                </ul>
+              </div>
+            </article>
+            <article class="pillar reveal" style="--i: 1">
+              <figure class="pillar__media">
+                <img src="img/mesa-consultoria-900.webp" width="900" height="506" alt="Xícara de café sobre a mesa de um escritório, ao lado de um caderno" loading="lazy" />
+              </figure>
+              <div class="pillar__body">
+                <h3><span class="hl">II</span> · Depois da aula</h3>
+                <p class="pillar__sub">Para levar a conversa para dentro da empresa</p>
+                <ul class="checklist">
+                  <li><svg class="ico" aria-hidden="true"><use href="#i-check" /></svg>PDF com o resumo: base legal, calendário e exemplos</li>
+                  <li><svg class="ico" aria-hidden="true"><use href="#i-check" /></svg>Atualizações sobre a reforma por e-mail</li>
+                  <li><svg class="ico" aria-hidden="true"><use href="#i-check" /></svg>Pontos concretos para levar ao contador, ao financeiro e ao comercial</li>
+                  <li><svg class="ico" aria-hidden="true"><use href="#i-check" /></svg>O que conferir em cadastro, sistema, contratos e benefícios de ICMS</li>
+                  <li><svg class="ico" aria-hidden="true"><use href="#i-check" /></svg>Garantia de 7 dias</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+          <div class="mid-cta">
+            <a class="btn" href="#oferta" data-checkout="pilares">Quero assistir à aula <svg class="ico" aria-hidden="true"><use href="#i-seta" /></svg></a>
+          </div>
         </div>
       </section>
 
       <!-- ============ QUEM CONDUZ ============ -->
       <section class="section navy" id="marcus" aria-labelledby="t-marcus" style="padding-top: 0">
         <div class="wrap">
-          <div class="slide-top"><span>Quem está à mesa com você</span><span>05</span></div>
-          <h2 class="slide-title reveal" id="t-marcus">Um tributarista que olha para a regra e para a operação</h2>
+          <div class="slide-top"><span>06 · Quem está à mesa com você</span><span>Marcus França</span></div>
+          <h2 class="slide-title reveal" id="t-marcus">Um tributarista que olha para a regra <span class="hl">e para a operação</span></h2>
           <div class="host">
             <div class="host__text">
               <p class="host__name reveal">Marcus Vinicius França</p>
@@ -356,14 +402,20 @@
               <img src="img/marcus-retrato.webp" width="456" height="620" alt="Retrato de Marcus França, de terno azul e braços cruzados" loading="lazy" />
             </figure>
           </div>
+          <dl class="stats reveal">
+            <div><dd>20 anos</dd><dt>de atuação em Direito Tributário</dt></div>
+            <div><dd>1 hora</dd><dt>de aula, direto ao ponto</dt></div>
+            <div><dd>4 setores</dd><dt>simulados passo a passo</dt></div>
+            <div><dd>7 dias</dd><dt>de garantia</dt></div>
+          </dl>
         </div>
       </section>
 
       <!-- ============ PARA QUEM É ============ -->
       <section class="section ivory" aria-labelledby="t-para-quem">
         <div class="wrap">
-          <div class="slide-top"><span>Antes de comprar</span><span>06</span></div>
-          <h2 class="slide-title reveal" id="t-para-quem">Esta aula é para você?</h2>
+          <div class="slide-top"><span>07 · Antes de comprar</span><span>Marcus França</span></div>
+          <h2 class="slide-title reveal" id="t-para-quem">Esta aula <span class="hl">é para você?</span></h2>
           <div class="cards slide-body">
             <div class="card card--green reveal">
               <p class="card__head"><svg class="ico" aria-hidden="true"><use href="#i-ok" /></svg>É para você se</p>
@@ -389,37 +441,48 @@
       <section class="offer navy" id="oferta" aria-labelledby="t-oferta">
         <figure class="offer__media">
           <img
-            src="img/mesa-consultoria-1672.webp"
-            srcset="img/mesa-consultoria-900.webp 900w, img/mesa-consultoria-1672.webp 1672w"
+            src="img/mesa-tax-scale-1672.webp"
+            srcset="img/mesa-tax-scale-900.webp 900w, img/mesa-tax-scale-1672.webp 1672w"
             sizes="(max-width: 960px) 100vw, 55vw"
             width="1672"
             height="941"
-            alt="Xícara de café fumegante sobre a mesa de um escritório, ao lado de um caderno"
+            alt="Duas xícaras de café e um caderno sobre uma mesa redonda de madeira"
             loading="lazy"
           />
         </figure>
         <div class="wrap offer__inner">
           <div class="offer__box">
-            <p class="scene__label">Sua vaga à mesa</p>
-            <h2 id="t-oferta">Café com Reforma Tributária</h2>
-            <p class="offer__for">Para empresários</p>
-            <ul class="includes">
-              <li><svg class="ico" aria-hidden="true"><use href="#i-play" /></svg><div><strong>Aula gravada de 1 hora</strong><span>Assista no horário que funcionar para você.</span></div></li>
-              <li><svg class="ico" aria-hidden="true"><use href="#i-doc" /></svg><div><strong>PDF com o resumo da aula</strong><span>Base legal, calendário e exemplos para consultar depois.</span></div></li>
-              <li><svg class="ico" aria-hidden="true"><use href="#i-email" /></svg><div><strong>Atualizações sobre a reforma por e-mail</strong><span>A implantação continua avançando. Você fica sabendo do que muda.</span></div></li>
+            <p class="scene__label">08 · Sua vaga à mesa</p>
+            <h2 id="t-oferta">O que muda <span class="hl">depois deste café</span></h2>
+            <ul class="checklist checklist--light">
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check" /></svg><span><strong>Preço</strong> decidido com a conta, não no chute</span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check" /></svg><span><strong>Fornecedores</strong> comparados pelo custo depois do crédito</span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check" /></svg><span><strong>Caixa</strong> planejado para o split payment</span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check" /></svg><span><strong>Equipe</strong> com uma lista clara do que conferir antes de 2027</span></li>
             </ul>
-            <div class="price offer__price">
-              <span class="price__value num" data-preco>R$ 147</span>
-              <span class="price__note" data-parcelas>à vista ou parcelado no cartão</span>
-            </div>
-            <a class="btn btn--wide" href="#oferta" data-checkout="oferta">
-              Quero assistir à aula
-              <svg class="ico" aria-hidden="true"><use href="#i-seta" /></svg>
-            </a>
-            <p class="offer__small"><svg class="ico" aria-hidden="true"><use href="#i-cadeado" /></svg>Pagamento seguro pela Cakto.</p>
-            <div class="guarantee">
-              <p class="guarantee__days">7<small>dias</small></p>
-              <p><strong>Garantia de 7 dias</strong>Assista à aula. Se não for para você, peça o reembolso em até 7 dias depois da compra.</p>
+            <p class="highlight-box">Preço, crédito e caixa na mesma conta.</p>
+
+            <div class="offer-card offer-card--wide">
+              <div class="offer-card__top">
+                <div class="price">
+                  <span class="offer-card__label">Café com Reforma Tributária · para empresários</span>
+                  <span class="price__value num" data-preco>R$ 147</span>
+                  <span class="price__note" data-parcelas>à vista ou parcelado no cartão</span>
+                </div>
+                <ul class="offer-card__list">
+                  <li><svg class="ico" aria-hidden="true"><use href="#i-check" /></svg>Aula gravada de 1 hora</li>
+                  <li><svg class="ico" aria-hidden="true"><use href="#i-check" /></svg>PDF com o resumo</li>
+                  <li><svg class="ico" aria-hidden="true"><use href="#i-check" /></svg>Atualizações por e-mail</li>
+                </ul>
+              </div>
+              <a class="btn btn--block" href="#oferta" data-checkout="oferta">
+                Quero assistir à aula
+                <svg class="ico" aria-hidden="true"><use href="#i-seta" /></svg>
+              </a>
+              <p class="offer-card__foot">
+                <span><svg class="ico" aria-hidden="true"><use href="#i-cadeado" /></svg>Pagamento seguro pela Cakto</span>
+                <span><svg class="ico" aria-hidden="true"><use href="#i-escudo" /></svg>Garantia de 7 dias</span>
+              </p>
             </div>
           </div>
         </div>
@@ -427,67 +490,42 @@
 
       <!-- ============ DÚVIDAS ============ -->
       <section class="section ivory" id="duvidas" aria-labelledby="t-duvidas">
-        <div class="wrap">
-          <div class="slide-top"><span>Antes de pedir o café</span><span>07</span></div>
-          <h2 class="slide-title reveal" id="t-duvidas">Perguntas frequentes</h2>
+        <div class="wrap faq-wrap">
+          <p class="center-label">09 · Tire suas dúvidas</p>
+          <h2 class="slide-title center reveal" id="t-duvidas">Perguntas <span class="hl">frequentes</span></h2>
           <div class="faq slide-body">
             <details>
-              <summary><span><svg class="ico" aria-hidden="true"><use href="#i-pergunta" /></svg>2026 não é só um ano de teste?</span><svg class="ico ico--toggle" aria-hidden="true"><use href="#i-mais" /></svg></summary>
+              <summary><span>2026 não é só um ano de teste?</span><svg class="ico ico--toggle" aria-hidden="true"><use href="#i-mais" /></svg></summary>
               <div><p>É, mas o teste também exige preparo. A empresa precisa saber emitir e conferir as notas com a CBS de 0,9% e o IBS de 0,1% de teste. E, em 2027, a CBS começa e PIS e Cofins deixam de existir.</p></div>
             </details>
             <details>
-              <summary><span><svg class="ico" aria-hidden="true"><use href="#i-pergunta" /></svg>Eu já tenho contador. Por que assistir?</span><svg class="ico ico--toggle" aria-hidden="true"><use href="#i-mais" /></svg></summary>
+              <summary><span>Eu já tenho contador. Por que assistir?</span><svg class="ico ico--toggle" aria-hidden="true"><use href="#i-mais" /></svg></summary>
               <div><p>Porque preço, compras, contratos e caixa são decisões de quem dirige a empresa. A aula ajuda você a entender o raciocínio e a levar ao contador, ao financeiro e ao comercial os pontos que merecem atenção na sua operação.</p></div>
             </details>
             <details>
-              <summary><span><svg class="ico" aria-hidden="true"><use href="#i-pergunta" /></svg>Minha empresa é do Simples. A aula serve para mim?</span><svg class="ico ico--toggle" aria-hidden="true"><use href="#i-mais" /></svg></summary>
+              <summary><span>Minha empresa é do Simples. A aula serve para mim?</span><svg class="ico ico--toggle" aria-hidden="true"><use href="#i-mais" /></svg></summary>
               <div><p>Sim. A aula trata da escolha entre manter IBS/CBS no Simples ou apurar esses tributos no regime regular, e do que entra nessa comparação. Os prazos dessas opções têm calendário próprio: confira sempre o calendário vigente antes de agir.</p></div>
             </details>
             <details>
-              <summary><span><svg class="ico" aria-hidden="true"><use href="#i-pergunta" /></svg>Os números dos exemplos valem para a minha empresa?</span><svg class="ico ico--toggle" aria-hidden="true"><use href="#i-mais" /></svg></summary>
+              <summary><span>Os números dos exemplos valem para a minha empresa?</span><svg class="ico ico--toggle" aria-hidden="true"><use href="#i-mais" /></svg></summary>
               <div><p>Não diretamente. São exercícios com alíquota hipotética de 27,5% para aprender o método. O que você leva é a lógica da conta, para aplicar aos dados da sua empresa.</p></div>
             </details>
             <details>
-              <summary><span><svg class="ico" aria-hidden="true"><use href="#i-pergunta" /></svg>Como recebo a aula?</span><svg class="ico ico--toggle" aria-hidden="true"><use href="#i-mais" /></svg></summary>
+              <summary><span>Como recebo a aula?</span><svg class="ico ico--toggle" aria-hidden="true"><use href="#i-mais" /></svg></summary>
               <div><p>A aula é gravada, com 1 hora de duração. Depois da compra, você assiste no horário que preferir e recebe o PDF com o resumo.</p></div>
             </details>
             <details>
-              <summary><span><svg class="ico" aria-hidden="true"><use href="#i-pergunta" /></svg>Como funciona a garantia?</span><svg class="ico ico--toggle" aria-hidden="true"><use href="#i-mais" /></svg></summary>
+              <summary><span>Como funciona a garantia?</span><svg class="ico ico--toggle" aria-hidden="true"><use href="#i-mais" /></svg></summary>
               <div><p>Você tem 7 dias depois da compra para pedir o reembolso.</p></div>
             </details>
             <details>
-              <summary><span><svg class="ico" aria-hidden="true"><use href="#i-pergunta" /></svg>E se eu quiser uma análise da minha empresa?</span><svg class="ico ico--toggle" aria-hidden="true"><use href="#i-mais" /></svg></summary>
+              <summary><span>E se eu quiser uma análise da minha empresa?</span><svg class="ico ico--toggle" aria-hidden="true"><use href="#i-mais" /></svg></summary>
               <div><p>Para olhar os números da sua operação, Marcus conduz a Consultoria Nova Reforma Tributária, contratada à parte. A aula é o primeiro passo para chegar a essa conversa com as informações organizadas.</p></div>
             </details>
           </div>
-        </div>
-      </section>
-
-      <!-- ============ FECHAMENTO ============ -->
-      <section class="scene" aria-labelledby="t-fecho">
-        <figure class="scene__media">
-          <img
-            src="img/mesa-tax-scale-1672.webp"
-            srcset="img/mesa-tax-scale-900.webp 900w, img/mesa-tax-scale-1672.webp 1672w"
-            sizes="100vw"
-            width="1672"
-            height="941"
-            alt=""
-            loading="lazy"
-          />
-        </figure>
-        <div class="scene__text">
-          <p class="scene__label reveal">Pegue o seu café</p>
-          <h2 class="reveal" id="t-fecho">Faça a conta antes de mudar o preço</h2>
-          <hr class="gold-rule reveal" />
-          <p class="scene__lead reveal" style="--i: 1">
-            1 hora de aula com Marcus França, o PDF com o resumo e as atualizações por e-mail, por <span class="num" data-preco>R$ 147</span>.
-            Garantia de 7 dias.
-          </p>
-          <a class="btn btn--wide reveal" style="--i: 2" href="#oferta" data-checkout="fechamento">
-            Quero assistir à aula
-            <svg class="ico" aria-hidden="true"><use href="#i-seta" /></svg>
-          </a>
+          <div class="mid-cta">
+            <a class="btn" href="#oferta" data-checkout="duvidas">Quero assistir à aula <svg class="ico" aria-hidden="true"><use href="#i-seta" /></svg></a>
+          </div>
         </div>
       </section>
     </main>
