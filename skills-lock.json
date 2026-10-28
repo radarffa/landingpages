@@ -1,6 +1,12 @@
 {
   "version": 1,
   "skills": {
+    "copy-page": {
+      "source": "pwdev-solucoes/pwdev-claude-marketplace",
+      "sourceType": "github",
+      "skillPath": "plugins/pwdev-copy/skills/copy-page/SKILL.md",
+      "computedHash": "de5e06db2156fb00cd06c994d49e336edb2b02a94c015b584b557181b3033e28"
+    },
     "landing-page-design": {
       "source": "101-skills/skills",
       "sourceType": "github",
